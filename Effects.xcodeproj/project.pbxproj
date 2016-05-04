@@ -1,0 +1,781 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F00640851BF2A1AA00B8BF59 /* MetronomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00640841BF2A1AA00B8BF59 /* MetronomeViewController.swift */; };
+		F0081E1C1BE3E4EB0078BF29 /* Effect3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0081E1B1BE3E4EB0078BF29 /* Effect3ViewController.swift */; };
+		F0081E1E1BE3E6F10078BF29 /* EQButton.png in Resources */ = {isa = PBXBuildFile; fileRef = F0081E1D1BE3E6F10078BF29 /* EQButton.png */; };
+		F0081E221BE621060078BF29 /* Effect4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0081E211BE621060078BF29 /* Effect4ViewController.swift */; };
+		F0081E241BE621130078BF29 /* Effect5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0081E231BE621130078BF29 /* Effect5ViewController.swift */; };
+		F0081E261BE621230078BF29 /* Effect6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0081E251BE621230078BF29 /* Effect6ViewController.swift */; };
+		F0081E281BE6212E0078BF29 /* Effect7ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0081E271BE6212E0078BF29 /* Effect7ViewController.swift */; };
+		F0081E2A1BE638C60078BF29 /* EQButtonPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = F0081E291BE638C60078BF29 /* EQButtonPressed.png */; };
+		F01279281BF12DEE00256BD9 /* PopBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = F01279271BF12DEE00256BD9 /* PopBackground.png */; };
+		F021DA7F1AFEA22000B08D07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F021DA7D1AFEA22000B08D07 /* Main.storyboard */; };
+		F04B0B581BEE87AE00881E98 /* Reverb.png in Resources */ = {isa = PBXBuildFile; fileRef = F04B0B541BEE87AE00881E98 /* Reverb.png */; };
+		F04B0B591BEE87AE00881E98 /* reverbButton.png in Resources */ = {isa = PBXBuildFile; fileRef = F04B0B551BEE87AE00881E98 /* reverbButton.png */; };
+		F04B0B5A1BEE87AE00881E98 /* reverbButtonPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = F04B0B561BEE87AE00881E98 /* reverbButtonPressed.png */; };
+		F04B0B5B1BEE87AE00881E98 /* reverbPot.png in Resources */ = {isa = PBXBuildFile; fileRef = F04B0B571BEE87AE00881E98 /* reverbPot.png */; };
+		F04B0B601BEF8B8400881E98 /* Looper.png in Resources */ = {isa = PBXBuildFile; fileRef = F04B0B5C1BEF8B8400881E98 /* Looper.png */; };
+		F04B0B611BEF8B8400881E98 /* looperButton.png in Resources */ = {isa = PBXBuildFile; fileRef = F04B0B5D1BEF8B8400881E98 /* looperButton.png */; };
+		F04B0B621BEF8B8400881E98 /* looperButtonPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = F04B0B5E1BEF8B8400881E98 /* looperButtonPressed.png */; };
+		F04B0B631BEF8B8400881E98 /* looperPot.png in Resources */ = {isa = PBXBuildFile; fileRef = F04B0B5F1BEF8B8400881E98 /* looperPot.png */; };
+		F04B0B661BEFCAEE00881E98 /* lightOff.png in Resources */ = {isa = PBXBuildFile; fileRef = F04B0B641BEFCAEE00881E98 /* lightOff.png */; };
+		F04B0B671BEFCAEE00881E98 /* redLightOn.png in Resources */ = {isa = PBXBuildFile; fileRef = F04B0B651BEFCAEE00881E98 /* redLightOn.png */; };
+		F04B0B691BEFD49500881E98 /* Flanger.png in Resources */ = {isa = PBXBuildFile; fileRef = F04B0B681BEFD49500881E98 /* Flanger.png */; };
+		F04B0B6B1BF0F3A600881E98 /* greenLightOn.png in Resources */ = {isa = PBXBuildFile; fileRef = F04B0B6A1BF0F3A600881E98 /* greenLightOn.png */; };
+		F04F1F021BA8277900DDA597 /* SelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F1F011BA8277900DDA597 /* SelectorViewController.swift */; };
+		F04F1F041BA836E300DDA597 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04F1F031BA836E300DDA597 /* MainViewController.swift */; };
+		F069E9A21BE15105004A54F6 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F069E9A11BE15105004A54F6 /* StoreKit.framework */; };
+		F07AB5271BCA496300DC6A35 /* amplifier.png in Resources */ = {isa = PBXBuildFile; fileRef = F07AB5261BCA496300DC6A35 /* amplifier.png */; };
+		F07AB52B1BCA4BD300DC6A35 /* dark_wall.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F07AB52A1BCA4BD300DC6A35 /* dark_wall.jpg */; };
+		F07AB52D1BCAE9AC00DC6A35 /* main_background.png in Resources */ = {isa = PBXBuildFile; fileRef = F07AB52C1BCAE9AC00DC6A35 /* main_background.png */; };
+		F07AB52F1BCAE9B300DC6A35 /* Preset_background.png in Resources */ = {isa = PBXBuildFile; fileRef = F07AB52E1BCAE9B300DC6A35 /* Preset_background.png */; };
+		F07AB5391BCC26B800DC6A35 /* inout.png in Resources */ = {isa = PBXBuildFile; fileRef = F07AB5381BCC26B800DC6A35 /* inout.png */; };
+		F07AB5401BCC349E00DC6A35 /* overdriveButton.png in Resources */ = {isa = PBXBuildFile; fileRef = F07AB53E1BCC349E00DC6A35 /* overdriveButton.png */; };
+		F07AB5411BCC349E00DC6A35 /* overdriveButtonPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = F07AB53F1BCC349E00DC6A35 /* overdriveButtonPressed.png */; };
+		F07AB5431BCC473800DC6A35 /* bypass.png in Resources */ = {isa = PBXBuildFile; fileRef = F07AB5421BCC473800DC6A35 /* bypass.png */; };
+		F07AB5471BCC52F100DC6A35 /* preset1.png in Resources */ = {isa = PBXBuildFile; fileRef = F07AB5441BCC52F100DC6A35 /* preset1.png */; };
+		F07AB5481BCC52F100DC6A35 /* preset2.png in Resources */ = {isa = PBXBuildFile; fileRef = F07AB5451BCC52F100DC6A35 /* preset2.png */; };
+		F07AB5491BCC52F100DC6A35 /* preset3.png in Resources */ = {isa = PBXBuildFile; fileRef = F07AB5461BCC52F100DC6A35 /* preset3.png */; };
+		F07AB54E1BCC56D800DC6A35 /* tunerButtonPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = F07AB54A1BCC56D800DC6A35 /* tunerButtonPressed.png */; };
+		F07AB5511BCC56D800DC6A35 /* metronomeButtonPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = F07AB54D1BCC56D800DC6A35 /* metronomeButtonPressed.png */; };
+		F07AB5531BCC652300DC6A35 /* redLed.png in Resources */ = {isa = PBXBuildFile; fileRef = F07AB5521BCC652300DC6A35 /* redLed.png */; };
+		F07AB5551BCE970900DC6A35 /* Delay.png in Resources */ = {isa = PBXBuildFile; fileRef = F07AB5541BCE970900DC6A35 /* Delay.png */; };
+		F07AB5571BCEC4A200DC6A35 /* delayPot.png in Resources */ = {isa = PBXBuildFile; fileRef = F07AB5561BCEC4A200DC6A35 /* delayPot.png */; };
+		F07AB55E1BCEC84100DC6A35 /* delayButton.png in Resources */ = {isa = PBXBuildFile; fileRef = F07AB55C1BCEC84100DC6A35 /* delayButton.png */; };
+		F07AB55F1BCEC84100DC6A35 /* delayButtonPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = F07AB55D1BCEC84100DC6A35 /* delayButtonPressed.png */; };
+		F07AB5611BCECF1000DC6A35 /* AddEffectsButton.png in Resources */ = {isa = PBXBuildFile; fileRef = F07AB5601BCECF1000DC6A35 /* AddEffectsButton.png */; };
+		F07AB5631BCED2F500DC6A35 /* PopUpViewControllerSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07AB5621BCED2F500DC6A35 /* PopUpViewControllerSwift.swift */; };
+		F07AB5671BCED74200DC6A35 /* PopUpViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F07AB5661BCED74200DC6A35 /* PopUpViewController_iPad.xib */; };
+		F07AC0401BE774AB0053B932 /* flangerPot in Resources */ = {isa = PBXBuildFile; fileRef = F07AC03C1BE774AB0053B932 /* flangerPot */; };
+		F07AC0431BE7753A0053B932 /* flangerButton.png in Resources */ = {isa = PBXBuildFile; fileRef = F07AC0411BE7753A0053B932 /* flangerButton.png */; };
+		F07AC0441BE7753A0053B932 /* flangerButtonPressed in Resources */ = {isa = PBXBuildFile; fileRef = F07AC0421BE7753A0053B932 /* flangerButtonPressed */; };
+		F09216C61BC19BF20056C0B0 /* Overdrive.png in Resources */ = {isa = PBXBuildFile; fileRef = F09216C51BC19BF20056C0B0 /* Overdrive.png */; };
+		F09216C81BC19E230056C0B0 /* OverdrivePot.png in Resources */ = {isa = PBXBuildFile; fileRef = F09216C71BC19E230056C0B0 /* OverdrivePot.png */; };
+		F09216CA1BC1B5BA0056C0B0 /* ViewControllerFactory1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09216C91BC1B5BA0056C0B0 /* ViewControllerFactory1.swift */; };
+		F098C4111AE2639800B18DA5 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F098C4101AE2639800B18DA5 /* Icon.png */; };
+		F09C23241BC307C500CADBAA /* ViewControllerFactory2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09C23231BC307C500CADBAA /* ViewControllerFactory2.swift */; };
+		F09C23261BC3086300CADBAA /* PresetViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09C23251BC3086300CADBAA /* PresetViewContoller.swift */; };
+		F0A24B941BFFA8450025E08A /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = F0A24B931BFFA8450025E08A /* cancel.png */; };
+		F0B02B221ADD992900E84BAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B02B211ADD992900E84BAF /* AppDelegate.swift */; };
+		F0B02B241ADD992900E84BAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B02B231ADD992900E84BAF /* ViewController.swift */; };
+		F0B02B291ADD992900E84BAF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0B02B281ADD992900E84BAF /* Images.xcassets */; };
+		F0B02B2C1ADD992900E84BAF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0B02B2A1ADD992900E84BAF /* LaunchScreen.xib */; };
+		F0B02B381ADD992900E84BAF /* EffectsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B02B371ADD992900E84BAF /* EffectsTests.swift */; };
+		F0D3D5121BBEF6A600CE8340 /* Effect1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D3D5111BBEF6A600CE8340 /* Effect1ViewController.swift */; };
+		F0D3D5141BBEF6BB00CE8340 /* Effect2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D3D5131BBEF6BB00CE8340 /* Effect2ViewController.swift */; };
+		F0D3D5161BBF02E500CE8340 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D3D5151BBF02E500CE8340 /* ViewControllerFactory.swift */; };
+		F0D3D51A1BBF077600CE8340 /* AudioProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = F084137C1AE2793E00DC86E1 /* AudioProcessor.m */; };
+		F0D3D51F1BBF08CB00CE8340 /* BufferProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D3D51D1BBF088700CE8340 /* BufferProcess.swift */; };
+		F0D923191C08BEA000CF6729 /* progress.png in Resources */ = {isa = PBXBuildFile; fileRef = F0D923181C08BEA000CF6729 /* progress.png */; };
+		F0E039D61BD55EB200AA8E2C /* ViewControllerFactory3.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E039D51BD55EB200AA8E2C /* ViewControllerFactory3.swift */; };
+		F0F3B4891BE809340093507D /* EQ.png in Resources */ = {isa = PBXBuildFile; fileRef = F0F3B4881BE809340093507D /* EQ.png */; };
+		F0F3B48B1BE8FE040093507D /* SliderButton.png in Resources */ = {isa = PBXBuildFile; fileRef = F0F3B48A1BE8FE040093507D /* SliderButton.png */; };
+		F0FF9D871BED2C100028E241 /* Tremolo.png in Resources */ = {isa = PBXBuildFile; fileRef = F0FF9D841BED2C100028E241 /* Tremolo.png */; };
+		F0FF9D881BED2C100028E241 /* TremoloButtonPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = F0FF9D851BED2C100028E241 /* TremoloButtonPressed.png */; };
+		F0FF9D891BED2C100028E241 /* tremoloButton.png in Resources */ = {isa = PBXBuildFile; fileRef = F0FF9D861BED2C100028E241 /* tremoloButton.png */; };
+		F0FF9D8B1BED38660028E241 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F0FF9D8A1BED38660028E241 /* icon.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F0B02B321ADD992900E84BAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F0B02B141ADD992900E84BAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F0B02B1B1ADD992900E84BAF;
+			remoteInfo = Effects;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F00640841BF2A1AA00B8BF59 /* MetronomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetronomeViewController.swift; sourceTree = "<group>"; };
+		F0081E1B1BE3E4EB0078BF29 /* Effect3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Effect3ViewController.swift; sourceTree = "<group>"; };
+		F0081E1D1BE3E6F10078BF29 /* EQButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EQButton.png; sourceTree = "<group>"; };
+		F0081E211BE621060078BF29 /* Effect4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Effect4ViewController.swift; sourceTree = "<group>"; };
+		F0081E231BE621130078BF29 /* Effect5ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Effect5ViewController.swift; sourceTree = "<group>"; };
+		F0081E251BE621230078BF29 /* Effect6ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Effect6ViewController.swift; sourceTree = "<group>"; };
+		F0081E271BE6212E0078BF29 /* Effect7ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Effect7ViewController.swift; sourceTree = "<group>"; };
+		F0081E291BE638C60078BF29 /* EQButtonPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EQButtonPressed.png; sourceTree = "<group>"; };
+		F01279271BF12DEE00256BD9 /* PopBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PopBackground.png; sourceTree = "<group>"; };
+		F021DA7E1AFEA22000B08D07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F04B0B541BEE87AE00881E98 /* Reverb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Reverb.png; sourceTree = "<group>"; };
+		F04B0B551BEE87AE00881E98 /* reverbButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reverbButton.png; sourceTree = "<group>"; };
+		F04B0B561BEE87AE00881E98 /* reverbButtonPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reverbButtonPressed.png; sourceTree = "<group>"; };
+		F04B0B571BEE87AE00881E98 /* reverbPot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reverbPot.png; sourceTree = "<group>"; };
+		F04B0B5C1BEF8B8400881E98 /* Looper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Looper.png; sourceTree = "<group>"; };
+		F04B0B5D1BEF8B8400881E98 /* looperButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = looperButton.png; sourceTree = "<group>"; };
+		F04B0B5E1BEF8B8400881E98 /* looperButtonPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = looperButtonPressed.png; sourceTree = "<group>"; };
+		F04B0B5F1BEF8B8400881E98 /* looperPot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = looperPot.png; sourceTree = "<group>"; };
+		F04B0B641BEFCAEE00881E98 /* lightOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lightOff.png; sourceTree = "<group>"; };
+		F04B0B651BEFCAEE00881E98 /* redLightOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redLightOn.png; sourceTree = "<group>"; };
+		F04B0B681BEFD49500881E98 /* Flanger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Flanger.png; sourceTree = "<group>"; };
+		F04B0B6A1BF0F3A600881E98 /* greenLightOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenLightOn.png; sourceTree = "<group>"; };
+		F04F1F011BA8277900DDA597 /* SelectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectorViewController.swift; sourceTree = "<group>"; };
+		F04F1F031BA836E300DDA597 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F069E9A11BE15105004A54F6 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		F07AB5261BCA496300DC6A35 /* amplifier.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amplifier.png; sourceTree = "<group>"; };
+		F07AB52A1BCA4BD300DC6A35 /* dark_wall.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dark_wall.jpg; sourceTree = "<group>"; };
+		F07AB52C1BCAE9AC00DC6A35 /* main_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_background.png; sourceTree = "<group>"; };
+		F07AB52E1BCAE9B300DC6A35 /* Preset_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Preset_background.png; sourceTree = "<group>"; };
+		F07AB5381BCC26B800DC6A35 /* inout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = inout.png; sourceTree = "<group>"; };
+		F07AB53E1BCC349E00DC6A35 /* overdriveButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overdriveButton.png; sourceTree = "<group>"; };
+		F07AB53F1BCC349E00DC6A35 /* overdriveButtonPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overdriveButtonPressed.png; sourceTree = "<group>"; };
+		F07AB5421BCC473800DC6A35 /* bypass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bypass.png; sourceTree = "<group>"; };
+		F07AB5441BCC52F100DC6A35 /* preset1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preset1.png; sourceTree = "<group>"; };
+		F07AB5451BCC52F100DC6A35 /* preset2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preset2.png; sourceTree = "<group>"; };
+		F07AB5461BCC52F100DC6A35 /* preset3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preset3.png; sourceTree = "<group>"; };
+		F07AB54A1BCC56D800DC6A35 /* tunerButtonPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tunerButtonPressed.png; sourceTree = "<group>"; };
+		F07AB54D1BCC56D800DC6A35 /* metronomeButtonPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = metronomeButtonPressed.png; sourceTree = "<group>"; };
+		F07AB5521BCC652300DC6A35 /* redLed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redLed.png; sourceTree = "<group>"; };
+		F07AB5541BCE970900DC6A35 /* Delay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Delay.png; sourceTree = "<group>"; };
+		F07AB5561BCEC4A200DC6A35 /* delayPot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delayPot.png; sourceTree = "<group>"; };
+		F07AB55C1BCEC84100DC6A35 /* delayButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delayButton.png; sourceTree = "<group>"; };
+		F07AB55D1BCEC84100DC6A35 /* delayButtonPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delayButtonPressed.png; sourceTree = "<group>"; };
+		F07AB5601BCECF1000DC6A35 /* AddEffectsButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AddEffectsButton.png; sourceTree = "<group>"; };
+		F07AB5621BCED2F500DC6A35 /* PopUpViewControllerSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpViewControllerSwift.swift; sourceTree = "<group>"; };
+		F07AB5661BCED74200DC6A35 /* PopUpViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopUpViewController_iPad.xib; sourceTree = "<group>"; };
+		F07AC03C1BE774AB0053B932 /* flangerPot */ = {isa = PBXFileReference; lastKnownFileType = file; path = flangerPot; sourceTree = "<group>"; };
+		F07AC0411BE7753A0053B932 /* flangerButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flangerButton.png; sourceTree = "<group>"; };
+		F07AC0421BE7753A0053B932 /* flangerButtonPressed */ = {isa = PBXFileReference; lastKnownFileType = file; path = flangerButtonPressed; sourceTree = "<group>"; };
+		F084137B1AE2793E00DC86E1 /* AudioProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioProcessor.h; sourceTree = SOURCE_ROOT; };
+		F084137C1AE2793E00DC86E1 /* AudioProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioProcessor.m; sourceTree = SOURCE_ROOT; };
+		F09216C51BC19BF20056C0B0 /* Overdrive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Overdrive.png; sourceTree = "<group>"; };
+		F09216C71BC19E230056C0B0 /* OverdrivePot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OverdrivePot.png; sourceTree = "<group>"; };
+		F09216C91BC1B5BA0056C0B0 /* ViewControllerFactory1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory1.swift; sourceTree = "<group>"; };
+		F098C4101AE2639800B18DA5 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = SOURCE_ROOT; };
+		F09C23231BC307C500CADBAA /* ViewControllerFactory2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory2.swift; sourceTree = "<group>"; };
+		F09C23251BC3086300CADBAA /* PresetViewContoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresetViewContoller.swift; sourceTree = "<group>"; };
+		F0A24B931BFFA8450025E08A /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel.png; sourceTree = "<group>"; };
+		F0B02B1C1ADD992900E84BAF /* Effects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Effects.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0B02B201ADD992900E84BAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0B02B211ADD992900E84BAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F0B02B231ADD992900E84BAF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F0B02B281ADD992900E84BAF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F0B02B2B1ADD992900E84BAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F0B02B311ADD992900E84BAF /* EffectsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EffectsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0B02B361ADD992900E84BAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0B02B371ADD992900E84BAF /* EffectsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsTests.swift; sourceTree = "<group>"; };
+		F0B02B421ADD998700E84BAF /* Effects-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Effects-Bridging-Header.h"; sourceTree = "<group>"; };
+		F0D3D5111BBEF6A600CE8340 /* Effect1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Effect1ViewController.swift; sourceTree = "<group>"; };
+		F0D3D5131BBEF6BB00CE8340 /* Effect2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Effect2ViewController.swift; sourceTree = "<group>"; };
+		F0D3D5151BBF02E500CE8340 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
+		F0D3D51D1BBF088700CE8340 /* BufferProcess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BufferProcess.swift; path = Effects/BufferProcess.swift; sourceTree = SOURCE_ROOT; };
+		F0D923181C08BEA000CF6729 /* progress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = progress.png; sourceTree = "<group>"; };
+		F0E039D51BD55EB200AA8E2C /* ViewControllerFactory3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory3.swift; sourceTree = "<group>"; };
+		F0F3B4881BE809340093507D /* EQ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EQ.png; sourceTree = "<group>"; };
+		F0F3B48A1BE8FE040093507D /* SliderButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SliderButton.png; sourceTree = "<group>"; };
+		F0FF9D841BED2C100028E241 /* Tremolo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tremolo.png; sourceTree = "<group>"; };
+		F0FF9D851BED2C100028E241 /* TremoloButtonPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TremoloButtonPressed.png; sourceTree = "<group>"; };
+		F0FF9D861BED2C100028E241 /* tremoloButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tremoloButton.png; sourceTree = "<group>"; };
+		F0FF9D8A1BED38660028E241 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F0B02B191ADD992900E84BAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F069E9A21BE15105004A54F6 /* StoreKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0B02B2E1ADD992900E84BAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F09216C41BC19BF20056C0B0 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				F0D923181C08BEA000CF6729 /* progress.png */,
+				F0A24B931BFFA8450025E08A /* cancel.png */,
+				F01279271BF12DEE00256BD9 /* PopBackground.png */,
+				F04B0B6A1BF0F3A600881E98 /* greenLightOn.png */,
+				F0FF9D8A1BED38660028E241 /* icon.png */,
+				F04B0B5C1BEF8B8400881E98 /* Looper.png */,
+				F04B0B5D1BEF8B8400881E98 /* looperButton.png */,
+				F04B0B5E1BEF8B8400881E98 /* looperButtonPressed.png */,
+				F04B0B5F1BEF8B8400881E98 /* looperPot.png */,
+				F04B0B541BEE87AE00881E98 /* Reverb.png */,
+				F04B0B551BEE87AE00881E98 /* reverbButton.png */,
+				F04B0B561BEE87AE00881E98 /* reverbButtonPressed.png */,
+				F04B0B571BEE87AE00881E98 /* reverbPot.png */,
+				F0FF9D841BED2C100028E241 /* Tremolo.png */,
+				F0FF9D851BED2C100028E241 /* TremoloButtonPressed.png */,
+				F0FF9D861BED2C100028E241 /* tremoloButton.png */,
+				F0F3B4881BE809340093507D /* EQ.png */,
+				F0081E1D1BE3E6F10078BF29 /* EQButton.png */,
+				F0081E291BE638C60078BF29 /* EQButtonPressed.png */,
+				F0F3B48A1BE8FE040093507D /* SliderButton.png */,
+				F09216C51BC19BF20056C0B0 /* Overdrive.png */,
+				F07AB53E1BCC349E00DC6A35 /* overdriveButton.png */,
+				F07AB53F1BCC349E00DC6A35 /* overdriveButtonPressed.png */,
+				F09216C71BC19E230056C0B0 /* OverdrivePot.png */,
+				F04B0B681BEFD49500881E98 /* Flanger.png */,
+				F07AC0411BE7753A0053B932 /* flangerButton.png */,
+				F07AC0421BE7753A0053B932 /* flangerButtonPressed */,
+				F07AC03C1BE774AB0053B932 /* flangerPot */,
+				F07AB5541BCE970900DC6A35 /* Delay.png */,
+				F07AB55C1BCEC84100DC6A35 /* delayButton.png */,
+				F07AB55D1BCEC84100DC6A35 /* delayButtonPressed.png */,
+				F07AB5561BCEC4A200DC6A35 /* delayPot.png */,
+				F07AB54A1BCC56D800DC6A35 /* tunerButtonPressed.png */,
+				F07AB54D1BCC56D800DC6A35 /* metronomeButtonPressed.png */,
+				F07AB5441BCC52F100DC6A35 /* preset1.png */,
+				F07AB5451BCC52F100DC6A35 /* preset2.png */,
+				F07AB5461BCC52F100DC6A35 /* preset3.png */,
+				F07AB5421BCC473800DC6A35 /* bypass.png */,
+				F04B0B641BEFCAEE00881E98 /* lightOff.png */,
+				F04B0B651BEFCAEE00881E98 /* redLightOn.png */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		F098C40F1AE25FEA00B18DA5 /* Pictures */ = {
+			isa = PBXGroup;
+			children = (
+				F07AB5521BCC652300DC6A35 /* redLed.png */,
+				F07AB52A1BCA4BD300DC6A35 /* dark_wall.jpg */,
+				F098C4101AE2639800B18DA5 /* Icon.png */,
+				F07AB52E1BCAE9B300DC6A35 /* Preset_background.png */,
+				F07AB52C1BCAE9AC00DC6A35 /* main_background.png */,
+				F07AB5261BCA496300DC6A35 /* amplifier.png */,
+				F07AB5381BCC26B800DC6A35 /* inout.png */,
+				F07AB5601BCECF1000DC6A35 /* AddEffectsButton.png */,
+			);
+			name = Pictures;
+			sourceTree = "<group>";
+		};
+		F0B02B131ADD992900E84BAF = {
+			isa = PBXGroup;
+			children = (
+				F069E9A11BE15105004A54F6 /* StoreKit.framework */,
+				F0B02B1E1ADD992900E84BAF /* Effects */,
+				F0B02B341ADD992900E84BAF /* EffectsTests */,
+				F0B02B1D1ADD992900E84BAF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F0B02B1D1ADD992900E84BAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F0B02B1C1ADD992900E84BAF /* Effects.app */,
+				F0B02B311ADD992900E84BAF /* EffectsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F0B02B1E1ADD992900E84BAF /* Effects */ = {
+			isa = PBXGroup;
+			children = (
+				F0B02B211ADD992900E84BAF /* AppDelegate.swift */,
+				F021DA7D1AFEA22000B08D07 /* Main.storyboard */,
+				F0D3D50F1BBEF64900CE8340 /* UI */,
+				F0D3D5171BBF033100CE8340 /* DataMeneger */,
+				F0B02B281ADD992900E84BAF /* Images.xcassets */,
+				F0B02B2A1ADD992900E84BAF /* LaunchScreen.xib */,
+				F0B02B231ADD992900E84BAF /* ViewController.swift */,
+				F0B02B1F1ADD992900E84BAF /* Supporting Files */,
+				F0B02B421ADD998700E84BAF /* Effects-Bridging-Header.h */,
+			);
+			path = Effects;
+			sourceTree = "<group>";
+		};
+		F0B02B1F1ADD992900E84BAF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F0B02B201ADD992900E84BAF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F0B02B341ADD992900E84BAF /* EffectsTests */ = {
+			isa = PBXGroup;
+			children = (
+				F0B02B371ADD992900E84BAF /* EffectsTests.swift */,
+				F0B02B351ADD992900E84BAF /* Supporting Files */,
+			);
+			path = EffectsTests;
+			sourceTree = "<group>";
+		};
+		F0B02B351ADD992900E84BAF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F0B02B361ADD992900E84BAF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F0D3D50F1BBEF64900CE8340 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				F09216C41BC19BF20056C0B0 /* Image */,
+				F098C40F1AE25FEA00B18DA5 /* Pictures */,
+				F0D3D5101BBEF66B00CE8340 /* ViewControllers */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		F0D3D5101BBEF66B00CE8340 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F07AB5621BCED2F500DC6A35 /* PopUpViewControllerSwift.swift */,
+				F07AB5661BCED74200DC6A35 /* PopUpViewController_iPad.xib */,
+				F04F1F031BA836E300DDA597 /* MainViewController.swift */,
+				F04F1F011BA8277900DDA597 /* SelectorViewController.swift */,
+				F0D3D5111BBEF6A600CE8340 /* Effect1ViewController.swift */,
+				F0D3D5131BBEF6BB00CE8340 /* Effect2ViewController.swift */,
+				F0081E1B1BE3E4EB0078BF29 /* Effect3ViewController.swift */,
+				F0081E211BE621060078BF29 /* Effect4ViewController.swift */,
+				F0081E231BE621130078BF29 /* Effect5ViewController.swift */,
+				F0081E251BE621230078BF29 /* Effect6ViewController.swift */,
+				F0081E271BE6212E0078BF29 /* Effect7ViewController.swift */,
+				F0D3D5151BBF02E500CE8340 /* ViewControllerFactory.swift */,
+				F09216C91BC1B5BA0056C0B0 /* ViewControllerFactory1.swift */,
+				F09C23231BC307C500CADBAA /* ViewControllerFactory2.swift */,
+				F0E039D51BD55EB200AA8E2C /* ViewControllerFactory3.swift */,
+				F09C23251BC3086300CADBAA /* PresetViewContoller.swift */,
+				F00640841BF2A1AA00B8BF59 /* MetronomeViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F0D3D5171BBF033100CE8340 /* DataMeneger */ = {
+			isa = PBXGroup;
+			children = (
+				F084137B1AE2793E00DC86E1 /* AudioProcessor.h */,
+				F084137C1AE2793E00DC86E1 /* AudioProcessor.m */,
+				F0D3D51D1BBF088700CE8340 /* BufferProcess.swift */,
+			);
+			name = DataMeneger;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F0B02B1B1ADD992900E84BAF /* Effects */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0B02B3B1ADD992900E84BAF /* Build configuration list for PBXNativeTarget "Effects" */;
+			buildPhases = (
+				F0B02B181ADD992900E84BAF /* Sources */,
+				F0B02B191ADD992900E84BAF /* Frameworks */,
+				F0B02B1A1ADD992900E84BAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Effects;
+			productName = Effects;
+			productReference = F0B02B1C1ADD992900E84BAF /* Effects.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F0B02B301ADD992900E84BAF /* EffectsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0B02B3E1ADD992900E84BAF /* Build configuration list for PBXNativeTarget "EffectsTests" */;
+			buildPhases = (
+				F0B02B2D1ADD992900E84BAF /* Sources */,
+				F0B02B2E1ADD992900E84BAF /* Frameworks */,
+				F0B02B2F1ADD992900E84BAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F0B02B331ADD992900E84BAF /* PBXTargetDependency */,
+			);
+			name = EffectsTests;
+			productName = EffectsTests;
+			productReference = F0B02B311ADD992900E84BAF /* EffectsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F0B02B141ADD992900E84BAF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Denes Csizmadia";
+				TargetAttributes = {
+					F0B02B1B1ADD992900E84BAF = {
+						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = 2U4H77URSK;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
+					};
+					F0B02B301ADD992900E84BAF = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = F0B02B1B1ADD992900E84BAF;
+					};
+				};
+			};
+			buildConfigurationList = F0B02B171ADD992900E84BAF /* Build configuration list for PBXProject "Effects" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F0B02B131ADD992900E84BAF;
+			productRefGroup = F0B02B1D1ADD992900E84BAF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F0B02B1B1ADD992900E84BAF /* Effects */,
+				F0B02B301ADD992900E84BAF /* EffectsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F0B02B1A1ADD992900E84BAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F07AB5511BCC56D800DC6A35 /* metronomeButtonPressed.png in Resources */,
+				F04B0B671BEFCAEE00881E98 /* redLightOn.png in Resources */,
+				F07AB5401BCC349E00DC6A35 /* overdriveButton.png in Resources */,
+				F04B0B601BEF8B8400881E98 /* Looper.png in Resources */,
+				F07AB5611BCECF1000DC6A35 /* AddEffectsButton.png in Resources */,
+				F098C4111AE2639800B18DA5 /* Icon.png in Resources */,
+				F07AB5571BCEC4A200DC6A35 /* delayPot.png in Resources */,
+				F04B0B631BEF8B8400881E98 /* looperPot.png in Resources */,
+				F07AC0441BE7753A0053B932 /* flangerButtonPressed in Resources */,
+				F07AB52D1BCAE9AC00DC6A35 /* main_background.png in Resources */,
+				F04B0B621BEF8B8400881E98 /* looperButtonPressed.png in Resources */,
+				F07AB5551BCE970900DC6A35 /* Delay.png in Resources */,
+				F07AB5491BCC52F100DC6A35 /* preset3.png in Resources */,
+				F04B0B5B1BEE87AE00881E98 /* reverbPot.png in Resources */,
+				F07AB5271BCA496300DC6A35 /* amplifier.png in Resources */,
+				F0081E1E1BE3E6F10078BF29 /* EQButton.png in Resources */,
+				F07AB5411BCC349E00DC6A35 /* overdriveButtonPressed.png in Resources */,
+				F0FF9D8B1BED38660028E241 /* icon.png in Resources */,
+				F07AB5531BCC652300DC6A35 /* redLed.png in Resources */,
+				F0B02B2C1ADD992900E84BAF /* LaunchScreen.xib in Resources */,
+				F07AB5391BCC26B800DC6A35 /* inout.png in Resources */,
+				F04B0B661BEFCAEE00881E98 /* lightOff.png in Resources */,
+				F07AB52F1BCAE9B300DC6A35 /* Preset_background.png in Resources */,
+				F0F3B4891BE809340093507D /* EQ.png in Resources */,
+				F0A24B941BFFA8450025E08A /* cancel.png in Resources */,
+				F07AB55E1BCEC84100DC6A35 /* delayButton.png in Resources */,
+				F0081E2A1BE638C60078BF29 /* EQButtonPressed.png in Resources */,
+				F021DA7F1AFEA22000B08D07 /* Main.storyboard in Resources */,
+				F04B0B691BEFD49500881E98 /* Flanger.png in Resources */,
+				F04B0B6B1BF0F3A600881E98 /* greenLightOn.png in Resources */,
+				F0FF9D891BED2C100028E241 /* tremoloButton.png in Resources */,
+				F07AB5431BCC473800DC6A35 /* bypass.png in Resources */,
+				F07AB5471BCC52F100DC6A35 /* preset1.png in Resources */,
+				F04B0B5A1BEE87AE00881E98 /* reverbButtonPressed.png in Resources */,
+				F0F3B48B1BE8FE040093507D /* SliderButton.png in Resources */,
+				F09216C61BC19BF20056C0B0 /* Overdrive.png in Resources */,
+				F07AB54E1BCC56D800DC6A35 /* tunerButtonPressed.png in Resources */,
+				F07AB5671BCED74200DC6A35 /* PopUpViewController_iPad.xib in Resources */,
+				F04B0B591BEE87AE00881E98 /* reverbButton.png in Resources */,
+				F04B0B581BEE87AE00881E98 /* Reverb.png in Resources */,
+				F07AB5481BCC52F100DC6A35 /* preset2.png in Resources */,
+				F09216C81BC19E230056C0B0 /* OverdrivePot.png in Resources */,
+				F01279281BF12DEE00256BD9 /* PopBackground.png in Resources */,
+				F07AC0401BE774AB0053B932 /* flangerPot in Resources */,
+				F07AC0431BE7753A0053B932 /* flangerButton.png in Resources */,
+				F0FF9D871BED2C100028E241 /* Tremolo.png in Resources */,
+				F07AB52B1BCA4BD300DC6A35 /* dark_wall.jpg in Resources */,
+				F04B0B611BEF8B8400881E98 /* looperButton.png in Resources */,
+				F0D923191C08BEA000CF6729 /* progress.png in Resources */,
+				F0B02B291ADD992900E84BAF /* Images.xcassets in Resources */,
+				F0FF9D881BED2C100028E241 /* TremoloButtonPressed.png in Resources */,
+				F07AB55F1BCEC84100DC6A35 /* delayButtonPressed.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0B02B2F1ADD992900E84BAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F0B02B181ADD992900E84BAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0B02B241ADD992900E84BAF /* ViewController.swift in Sources */,
+				F0B02B221ADD992900E84BAF /* AppDelegate.swift in Sources */,
+				F09C23261BC3086300CADBAA /* PresetViewContoller.swift in Sources */,
+				F07AB5631BCED2F500DC6A35 /* PopUpViewControllerSwift.swift in Sources */,
+				F0D3D5161BBF02E500CE8340 /* ViewControllerFactory.swift in Sources */,
+				F0081E1C1BE3E4EB0078BF29 /* Effect3ViewController.swift in Sources */,
+				F0D3D51A1BBF077600CE8340 /* AudioProcessor.m in Sources */,
+				F0D3D5121BBEF6A600CE8340 /* Effect1ViewController.swift in Sources */,
+				F0D3D5141BBEF6BB00CE8340 /* Effect2ViewController.swift in Sources */,
+				F04F1F041BA836E300DDA597 /* MainViewController.swift in Sources */,
+				F0E039D61BD55EB200AA8E2C /* ViewControllerFactory3.swift in Sources */,
+				F0081E241BE621130078BF29 /* Effect5ViewController.swift in Sources */,
+				F00640851BF2A1AA00B8BF59 /* MetronomeViewController.swift in Sources */,
+				F09C23241BC307C500CADBAA /* ViewControllerFactory2.swift in Sources */,
+				F04F1F021BA8277900DDA597 /* SelectorViewController.swift in Sources */,
+				F09216CA1BC1B5BA0056C0B0 /* ViewControllerFactory1.swift in Sources */,
+				F0D3D51F1BBF08CB00CE8340 /* BufferProcess.swift in Sources */,
+				F0081E281BE6212E0078BF29 /* Effect7ViewController.swift in Sources */,
+				F0081E261BE621230078BF29 /* Effect6ViewController.swift in Sources */,
+				F0081E221BE621060078BF29 /* Effect4ViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0B02B2D1ADD992900E84BAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0B02B381ADD992900E84BAF /* EffectsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F0B02B331ADD992900E84BAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F0B02B1B1ADD992900E84BAF /* Effects */;
+			targetProxy = F0B02B321ADD992900E84BAF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F021DA7D1AFEA22000B08D07 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F021DA7E1AFEA22000B08D07 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F0B02B2A1ADD992900E84BAF /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F0B02B2B1ADD992900E84BAF /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F0B02B391ADD992900E84BAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F0B02B3A1ADD992900E84BAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F0B02B3C1ADD992900E84BAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				INFOPLIST_FILE = Effects/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.andD.effects2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_INCLUDE_PATHS = "";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Effects/Effects-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		F0B02B3D1ADD992900E84BAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				INFOPLIST_FILE = Effects/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.andD.effects2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_INCLUDE_PATHS = "";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Effects/Effects-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+		F0B02B3F1ADD992900E84BAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = EffectsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Effects.app/Effects";
+			};
+			name = Debug;
+		};
+		F0B02B401ADD992900E84BAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = EffectsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Effects.app/Effects";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F0B02B171ADD992900E84BAF /* Build configuration list for PBXProject "Effects" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0B02B391ADD992900E84BAF /* Debug */,
+				F0B02B3A1ADD992900E84BAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F0B02B3B1ADD992900E84BAF /* Build configuration list for PBXNativeTarget "Effects" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0B02B3C1ADD992900E84BAF /* Debug */,
+				F0B02B3D1ADD992900E84BAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F0B02B3E1ADD992900E84BAF /* Build configuration list for PBXNativeTarget "EffectsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0B02B3F1ADD992900E84BAF /* Debug */,
+				F0B02B401ADD992900E84BAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F0B02B141ADD992900E84BAF /* Project object */;
+}

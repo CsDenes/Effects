@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopUpViewControllerSwift" customModule="Effects">
+            <connections>
+                <outlet property="Activity" destination="Xmm-hE-w93" id="HE9-Nb-Ap4"/>
+                <outlet property="buyEffect1Button" destination="zcx-dC-Ie0" id="OH8-oS-oIa"/>
+                <outlet property="popUpView" destination="cYT-D9-Z5J" id="idF-M2-Ksa"/>
+                <outlet property="view" destination="1" id="b8x-g2-m73"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cYT-D9-Z5J">
+                    <rect key="frame" x="100" y="150" width="569" height="724"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="PopBackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="AWQ-qE-ATD">
+                            <rect key="frame" x="47" y="10" width="569" height="724"/>
+                            <animations/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ple-bp-UYe">
+                            <rect key="frame" x="539" y="10" width="20" height="20"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="AVp-AL-fTV"/>
+                                <constraint firstAttribute="width" constant="20" id="psK-Xs-V1a"/>
+                            </constraints>
+                            <state key="normal" image="cancel.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="closePopup:" destination="-1" eventType="touchUpInside" id="9Di-wV-hHB"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcx-dC-Ie0">
+                            <rect key="frame" x="85" y="262" width="100" height="200"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="3Dq-yJ-3Wt"/>
+                                <constraint firstAttribute="height" constant="200" id="qKa-2R-h3h"/>
+                            </constraints>
+                            <state key="normal" image="looperButton.png"/>
+                            <connections>
+                                <action selector="buyEffect1Button:" destination="-1" eventType="touchUpInside" id="QkG-hd-vYG"/>
+                            </connections>
+                        </button>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="Xmm-hE-w93">
+                            <rect key="frame" x="260" y="337" width="50" height="50"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="L4e-hh-mmh"/>
+                                <constraint firstAttribute="width" constant="50" id="Sgc-MA-znJ"/>
+                            </constraints>
+                        </activityIndicatorView>
+                    </subviews>
+                    <animations/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="zcx-dC-Ie0" firstAttribute="centerX" secondItem="AWQ-qE-ATD" secondAttribute="centerX" constant="-150" id="58I-BZ-D5w"/>
+                        <constraint firstItem="zcx-dC-Ie0" firstAttribute="centerY" secondItem="AWQ-qE-ATD" secondAttribute="centerY" id="8tL-gz-QNl"/>
+                        <constraint firstAttribute="bottom" secondItem="AWQ-qE-ATD" secondAttribute="bottom" id="E5i-v3-5kM"/>
+                        <constraint firstAttribute="trailing" secondItem="Ple-bp-UYe" secondAttribute="trailing" constant="10" id="Us1-gp-UYp"/>
+                        <constraint firstItem="Xmm-hE-w93" firstAttribute="centerX" secondItem="AWQ-qE-ATD" secondAttribute="centerX" id="a2q-9W-1f6"/>
+                        <constraint firstItem="Ple-bp-UYe" firstAttribute="top" secondItem="cYT-D9-Z5J" secondAttribute="top" constant="10" id="dtz-Ja-sk8"/>
+                        <constraint firstAttribute="trailing" secondItem="AWQ-qE-ATD" secondAttribute="trailing" id="i07-Bw-alk"/>
+                        <constraint firstItem="AWQ-qE-ATD" firstAttribute="leading" secondItem="cYT-D9-Z5J" secondAttribute="leading" id="jEi-T7-4iw"/>
+                        <constraint firstItem="Xmm-hE-w93" firstAttribute="centerY" secondItem="AWQ-qE-ATD" secondAttribute="centerY" id="qRi-tT-rLk"/>
+                        <constraint firstItem="AWQ-qE-ATD" firstAttribute="top" secondItem="cYT-D9-Z5J" secondAttribute="top" id="uMu-ID-H35"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="cYT-D9-Z5J" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="100" id="7BA-0c-iJw"/>
+                <constraint firstItem="cYT-D9-Z5J" firstAttribute="centerX" secondItem="1" secondAttribute="centerX" id="7OE-dO-zCC"/>
+                <constraint firstAttribute="bottom" secondItem="cYT-D9-Z5J" secondAttribute="bottom" constant="150" id="8u8-93-sv0"/>
+                <constraint firstItem="cYT-D9-Z5J" firstAttribute="top" secondItem="1" secondAttribute="top" constant="150" id="zDT-Rg-ixk"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="PopBackground.png" width="640" height="920"/>
+        <image name="cancel.png" width="128" height="128"/>
+        <image name="looperButton.png" width="253" height="567"/>
+    </resources>
+</document>
