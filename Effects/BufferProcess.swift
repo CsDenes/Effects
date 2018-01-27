@@ -17,12 +17,12 @@ var inValue = 0.0
 var outValue = 0.0
 
 
-var progressBuffer = [Double](count: 2000, repeatedValue: 0.0)
+var progressBuffer = [Double](repeating: 0.0, count: 2000)
 var progressIndex : Int = 1
 var helpBufferCount = 50000
-var helpBuffer = [Double](count: helpBufferCount, repeatedValue: 0.5)  //buffer to delay
+var helpBuffer = [Double](repeating: 0.5, count: helpBufferCount)  //buffer to delay
 var reverbBufferCount = 100000
-var reverbBuffer = [Double](count: reverbBufferCount, repeatedValue: 0.5)
+var reverbBuffer = [Double](repeating: 0.5, count: reverbBufferCount)
 var reverbIndex : Int = 1
 
 
@@ -43,12 +43,12 @@ var TremoloIndicator = true
 
 
 
-var realfilter = [Double](count: 1024 , repeatedValue: 0)
-var imaginaryfilter = [Double](count: 1024, repeatedValue: 0)
+var realfilter = [Double](repeating: 0 , count: 1024)
+var imaginaryfilter = [Double](repeating: 0, count: 1024)
 
 
 var looperBufferCount = 1000000
-var looperBuffer = [Double](count: looperBufferCount, repeatedValue : 0.0)
+var looperBuffer = [Double](repeating: 0.0, count: looperBufferCount)
 
 
 var looperIndex = 0
@@ -105,20 +105,20 @@ var sign : Bool = true
         
         
             
-        for var index = 0; index < Int(bufferSize); index++ {
+        for index in 0 ..< Int(bufferSize) {
             
             var Sample : Double = Double(buffer[index]) / 32767.0
             
             if progressIndex >= 2000 { progressIndex = 0}
             progressBuffer[progressIndex] = Sample
-            progressIndex++
+            progressIndex += 1
             
             if reverbIndex >= reverbBufferCount { reverbIndex = 0}
             
             if helpIndex >= helpBufferCount { helpIndex = 0}
             if reverbIndex >= reverbBufferCount { reverbIndex = 0}
             reverbBuffer[reverbIndex] = Sample
-            reverbIndex++
+            reverbIndex += 1
             
             
             if (FlangerIsOn){
@@ -132,9 +132,9 @@ var sign : Bool = true
                 let flangerSample : Double = reverbBuffer[flangerIndex]
                 Sample =   Sample + flangerSample * Double(flangerFeedback)
                 // flangerFeedbackValue = Sample
-                reverbIndex--
+                reverbIndex -= 1
                 reverbBuffer[reverbIndex] = Sample
-                reverbIndex++
+                reverbIndex += 1
                 
                 
             }
@@ -232,20 +232,20 @@ var sign : Bool = true
                 case .recordingFirstly:
                     looperBuffer[looperIndex] = Sample
                     looperValue = looperIndex
-                    looperIndex++
+                    looperIndex += 1
                     if looperIndex >= looperBufferCount {
                     currentLooperState = .record
                     looperIndex = 0}
                     
                 case .play:
                     Sample = Sample + looperBuffer[looperIndex]
-                    looperIndex++
+                    looperIndex += 1
                     if looperIndex > looperValue {
                     looperIndex = 0}
                 case .record:
                     looperBuffer[looperIndex] += Sample
                     Sample = looperBuffer[looperIndex]
-                    looperIndex++
+                    looperIndex += 1
                     if looperIndex > looperValue {
                     looperIndex = 0}
                     }
@@ -256,7 +256,7 @@ var sign : Bool = true
                        
             
             helpBuffer[helpIndex] = Sample
-            helpIndex++
+            helpIndex += 1
             
             //print (Sample)
             Sample = (Sample < -1.0) ? -1.0 : (Sample > 1.0) ? 1.0 : Sample
@@ -365,17 +365,17 @@ var sign : Bool = true
 //    return out
 //    
 
-public func fft(input: UnsafeMutablePointer<Int16>) -> UnsafeMutablePointer<Int16> {
-    var len = 1024
-    var real = [Double](count: len, repeatedValue: 0.0)
+public func fft(_ input: UnsafeMutablePointer<Int16>) -> UnsafeMutablePointer<Int16> {
+    let len = 1024
+    var real = [Double](repeating: 0.0, count: len)
     vDSP_vflt16D(input, 1, &real, 1, UInt(len))
-    var imaginary = [Double](count: len, repeatedValue: 0.0)
+    var imaginary = [Double](repeating: 0.0, count: len)
     var splitComplex = DSPDoubleSplitComplex(realp: &real, imagp: &imaginary)
     
     let length = vDSP_Length(floor(log2(Float(len))))
     let radix = FFTRadix(kFFTRadix2)
     let weights = vDSP_create_fftsetupD(length, radix)
-    vDSP_fft_zipD(weights, &splitComplex, 1, length, FFTDirection(FFT_FORWARD))
+    vDSP_fft_zipD(weights!, &splitComplex, 1, length, FFTDirection(FFT_FORWARD))
     
     
     var complexFilter = DSPDoubleSplitComplex(realp: &realfilter, imagp: &imaginaryfilter)
@@ -383,14 +383,14 @@ public func fft(input: UnsafeMutablePointer<Int16>) -> UnsafeMutablePointer<Int1
     
     vDSP_zvmulD(&splitComplex, 1, &complexFilter, 1, &splitComplex, 1, vDSP_Length(len), 1)
     
-    vDSP_fft_zipD(weights, &splitComplex, 1, length, FFTDirection(FFT_INVERSE))
+    vDSP_fft_zipD(weights!, &splitComplex, 1, length, FFTDirection(FFT_INVERSE))
     
     
-    var out = [Double](count: len, repeatedValue: 0.0)
+    var out = [Double](repeating: 0.0, count: len)
     vDSP_vsmulD(splitComplex.realp, 1, [1.0 /  (Double(len))], &out, 1, vDSP_Length(len))
 
     
-    var output : UnsafeMutablePointer<Int16> = input
+    let output : UnsafeMutablePointer<Int16> = input
     vDSP_vfix16D(&out, 1, output, 1, UInt(len))
     
     vDSP_destroy_fftsetupD(weights)

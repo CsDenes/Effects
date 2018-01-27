@@ -44,52 +44,52 @@ class Effect3ViewController: UIViewController {
     var isON = false
     override func viewDidLoad() {
         super.viewDidLoad()
-        Slider1.setThumbImage(UIImage(named: "SliderButton.png"), forState: .Normal)
-        Slider2.setThumbImage(UIImage(named: "SliderButton.png"), forState: .Normal)
-        Slider3.setThumbImage(UIImage(named: "SliderButton.png"), forState: .Normal)
-        Slider4.setThumbImage(UIImage(named: "SliderButton.png"), forState: .Normal)
-        Slider5.setThumbImage(UIImage(named: "SliderButton.png"), forState: .Normal)
-        Slider6.setThumbImage(UIImage(named: "SliderButton.png"), forState: .Normal)
+        Slider1.setThumbImage(UIImage(named: "SliderButton.png"), for: UIControlState())
+        Slider2.setThumbImage(UIImage(named: "SliderButton.png"), for: UIControlState())
+        Slider3.setThumbImage(UIImage(named: "SliderButton.png"), for: UIControlState())
+        Slider4.setThumbImage(UIImage(named: "SliderButton.png"), for: UIControlState())
+        Slider5.setThumbImage(UIImage(named: "SliderButton.png"), for: UIControlState())
+        Slider6.setThumbImage(UIImage(named: "SliderButton.png"), for: UIControlState())
         
         
         redLed.image = UIImage(named: "lightOff.png")
         let tapGestrure = UITapGestureRecognizer()
-        tapGestrure.addTarget(self, action: "handleTap")
+        tapGestrure.addTarget(self, action: #selector(Effect3ViewController.handleTap))
         self.tapView.addGestureRecognizer(tapGestrure)
         
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "switchEffect", name: "ByPass3ButtonPressed", object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(Effect3ViewController.switchEffect), name: NSNotification.Name(rawValue: "ByPass3ButtonPressed"), object: nil)
 
         // Do any additional setup after loading the view.
     }
     
     
-    @IBAction func Slider1(sender: AnyObject) {
+    @IBAction func Slider1(_ sender: AnyObject) {
     self.eQ1 = Slider1.value
     EQ1 = self.eQ1
     }
     
-    @IBAction func Slider2(sender: AnyObject) {
+    @IBAction func Slider2(_ sender: AnyObject) {
         self.eQ2 = Slider2.value
         EQ2 = self.eQ2
     }
    
-    @IBAction func Slider3(sender: AnyObject) {
+    @IBAction func Slider3(_ sender: AnyObject) {
         self.eQ3 = Slider3.value
         EQ3 = self.eQ3
     }
     
-    @IBAction func Slider4(sender: AnyObject) {
+    @IBAction func Slider4(_ sender: AnyObject) {
         self.eQ4 = Slider4.value
         EQ4 = self.eQ4
     }
     
-    @IBAction func Slider5(sender: AnyObject) {
+    @IBAction func Slider5(_ sender: AnyObject) {
         self.eQ5 = Slider5.value
         EQ5 = self.eQ5
     }
 
-    @IBAction func Slider6(sender: AnyObject) {
+    @IBAction func Slider6(_ sender: AnyObject) {
         self.eQ6 = Slider6.value
         EQ6 = self.eQ6
     }
@@ -98,7 +98,7 @@ class Effect3ViewController: UIViewController {
     
     func handleTap() {
         
-        NSNotificationCenter.defaultCenter().postNotificationName("setByPass3", object: nil)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "setByPass3"), object: nil)
         self.isON = !isON
         if(isON){
             self.redLed.image = UIImage(named: "redLightOn.png")

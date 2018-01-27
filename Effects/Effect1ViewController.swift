@@ -28,16 +28,16 @@ class Effect1ViewController: UIViewController {
         redLed.image = UIImage(named: "lightOff.png")
         
         let rotationGestrure = UIRotationGestureRecognizer()
-        rotationGestrure.addTarget(self, action: "handleRotation:")
+        rotationGestrure.addTarget(self, action: #selector(Effect1ViewController.handleRotation(_:)))
         self.rotateView.addGestureRecognizer(rotationGestrure)
         
         let tapGestrure = UITapGestureRecognizer()
-        tapGestrure.addTarget(self, action: "handleTap")
+        tapGestrure.addTarget(self, action: #selector(Effect1ViewController.handleTap))
         self.tapView.addGestureRecognizer(tapGestrure)
         
         
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "switchEffect", name: "ByPass1ButtonPressed", object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(Effect1ViewController.switchEffect), name: NSNotification.Name(rawValue: "ByPass1ButtonPressed"), object: nil)
         
         
 
@@ -50,12 +50,12 @@ class Effect1ViewController: UIViewController {
     }
     
     
-    func handleRotation (rotationGesture : UIRotationGestureRecognizer) {
+    func handleRotation (_ rotationGesture : UIRotationGestureRecognizer) {
         self.overdrivelevel -= Float(rotationGesture.rotation)/6
         if self.overdrivelevel > 0.9 {self.overdrivelevel = 0.9}
         else if self.overdrivelevel < 0.1 {self.overdrivelevel = 0.1}
         else {
-        self.rotateView.transform = CGAffineTransformRotate(self.rotateView.transform, rotationGesture.rotation)
+        self.rotateView.transform = self.rotateView.transform.rotated(by: rotationGesture.rotation)
         }
         Overdrivelevel = self.overdrivelevel
       //  print(Overdrivelevel)
@@ -65,7 +65,7 @@ class Effect1ViewController: UIViewController {
     
     func handleTap() {
     
-        NSNotificationCenter.defaultCenter().postNotificationName("setByPass1", object: nil)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "setByPass1"), object: nil)
         self.isON = !isON
         if(isON){
         self.redLed.image = UIImage(named: "redLightOn.png")

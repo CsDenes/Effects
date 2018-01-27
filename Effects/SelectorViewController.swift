@@ -60,59 +60,59 @@ class SelectorViewController: UIViewController {
         super.viewDidLoad()
         
         
-        self.Effect1.setImage(UIImage(named: "overdriveButtonPressed.png"), forState: .Normal)
-        self.ByPass1.setImage(UIImage(named: "bypass.png"), forState: .Normal)
+        self.Effect1.setImage(UIImage(named: "overdriveButtonPressed.png"), for: UIControlState())
+        self.ByPass1.setImage(UIImage(named: "bypass.png"), for: UIControlState())
         self.ByPass1.alpha=1
         
-        self.Effect2.setImage(UIImage(named: "delayButton.png"), forState: .Normal)
-        self.ByPass2.setImage(UIImage(named: "bypass.png"), forState: .Normal)
+        self.Effect2.setImage(UIImage(named: "delayButton.png"), for: UIControlState())
+        self.ByPass2.setImage(UIImage(named: "bypass.png"), for: UIControlState())
         self.ByPass2.alpha=1
         
         
-        self.Effect3.setImage(UIImage(named: "EQButton.png"), forState: .Normal)
-        self.ByPass3.setImage(UIImage(named: "bypass.png"), forState: .Normal)
+        self.Effect3.setImage(UIImage(named: "EQButton.png"), for: UIControlState())
+        self.ByPass3.setImage(UIImage(named: "bypass.png"), for: UIControlState())
         self.ByPass3.alpha=1
         
-        self.Effect4.setImage(UIImage(named: "flangerButton.png"), forState: .Normal)
-        self.ByPass4.setImage(UIImage(named: "bypass.png"), forState: .Normal)
+        self.Effect4.setImage(UIImage(named: "flangerButton.png"), for: UIControlState())
+        self.ByPass4.setImage(UIImage(named: "bypass.png"), for: UIControlState())
         self.ByPass4.alpha=1
         
-        self.Effect5.setImage(UIImage(named: "tremoloButton.png"), forState: .Normal)
-        self.ByPass5.setImage(UIImage(named: "bypass.png"), forState: .Normal)
+        self.Effect5.setImage(UIImage(named: "tremoloButton.png"), for: UIControlState())
+        self.ByPass5.setImage(UIImage(named: "bypass.png"), for: UIControlState())
         self.ByPass5.alpha=1
 
-        self.Effect6.setImage(UIImage(named: "reverbButton.png"), forState: .Normal)
-        self.ByPass6.setImage(UIImage(named: "bypass.png"), forState: .Normal)
+        self.Effect6.setImage(UIImage(named: "reverbButton.png"), for: UIControlState())
+        self.ByPass6.setImage(UIImage(named: "bypass.png"), for: UIControlState())
         self.ByPass6.alpha=1
 
-        self.Effect7.setImage(UIImage(named: "looperButton.png"), forState: .Normal)
-        self.ByPass7.setImage(UIImage(named: "bypass.png"), forState: .Normal)
+        self.Effect7.setImage(UIImage(named: "looperButton.png"), for: UIControlState())
+        self.ByPass7.setImage(UIImage(named: "bypass.png"), for: UIControlState())
         self.ByPass7.alpha=1
         
-        self.Effect7.hidden = true
-        self.ByPass7.hidden = true
+        self.Effect7.isHidden = true
+        self.ByPass7.isHidden = true
 
         
         
         
         
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "buyEffect1", name: "buyEffect1", object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(SelectorViewController.buyEffect1), name: NSNotification.Name(rawValue: "buyEffect1"), object: nil)
         
-         NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateNotificationSentLabel", name: mySpecialNotificationKey, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "setByPass1", name: "setByPass1", object: nil)
-           NSNotificationCenter.defaultCenter().addObserver(self, selector: "setByPass2", name: "setByPass2", object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "setByPass3", name: "setByPass3", object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "setByPass4", name: "setByPass4", object: nil)
-         NSNotificationCenter.defaultCenter().addObserver(self, selector: "setByPass5", name: "setByPass5", object: nil)
-         NSNotificationCenter.defaultCenter().addObserver(self, selector: "setByPass6", name: "setByPass6", object: nil)
-         NSNotificationCenter.defaultCenter().addObserver(self, selector: "setByPass7", name: "setByPass7", object: nil)
+         NotificationCenter.default.addObserver(self, selector: #selector(SelectorViewController.updateNotificationSentLabel), name: NSNotification.Name(rawValue: mySpecialNotificationKey), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(SelectorViewController.setByPass1), name: NSNotification.Name(rawValue: "setByPass1"), object: nil)
+           NotificationCenter.default.addObserver(self, selector: #selector(SelectorViewController.setByPass2), name: NSNotification.Name(rawValue: "setByPass2"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(SelectorViewController.setByPass3), name: NSNotification.Name(rawValue: "setByPass3"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(SelectorViewController.setByPass4), name: NSNotification.Name(rawValue: "setByPass4"), object: nil)
+         NotificationCenter.default.addObserver(self, selector: #selector(SelectorViewController.setByPass5), name: NSNotification.Name(rawValue: "setByPass5"), object: nil)
+         NotificationCenter.default.addObserver(self, selector: #selector(SelectorViewController.setByPass6), name: NSNotification.Name(rawValue: "setByPass6"), object: nil)
+         NotificationCenter.default.addObserver(self, selector: #selector(SelectorViewController.setByPass7), name: NSNotification.Name(rawValue: "setByPass7"), object: nil)
 
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "update", name: "selectorUpdate", object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(SelectorViewController.update), name: NSNotification.Name(rawValue: "selectorUpdate"), object: nil)
         
         
-        self.preferredContentSize = CGSizeMake(320.0, 600.0)
+        self.preferredContentSize = CGSize(width: 320.0, height: 600.0)
 
         // Do any additional setup after loading the view.
     }
@@ -123,17 +123,17 @@ class SelectorViewController: UIViewController {
     }
    
     
-    @IBAction func AddEffectButton(sender: AnyObject) {
+    @IBAction func AddEffectButton(_ sender: AnyObject) {
        
-        NSNotificationCenter.defaultCenter().postNotificationName("PopUp", object: nil)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "PopUp"), object: nil)
         
     
         
     }
     
    
-    @IBAction func Effect1Button(sender: AnyObject) {
-        NSNotificationCenter.defaultCenter().postNotificationName(mySpecialNotificationKey, object: nil, userInfo: ["VC" : 1])
+    @IBAction func Effect1Button(_ sender: AnyObject) {
+        NotificationCenter.default.post(name: Notification.Name(rawValue: mySpecialNotificationKey), object: nil, userInfo: ["VC" : 1])
         self.isEffect1 = true
         self.isEffect2 = false
         self.isEffect3 = false
@@ -145,9 +145,9 @@ class SelectorViewController: UIViewController {
         update()
     }
     
-    @IBAction func ByPass1Button(sender: AnyObject) {
+    @IBAction func ByPass1Button(_ sender: AnyObject) {
         isByPass1 = !isByPass1
-        NSNotificationCenter.defaultCenter().postNotificationName("ByPass1ButtonPressed", object: nil)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "ByPass1ButtonPressed"), object: nil)
         if(isPreset1){
         ViewControllerFactory1.sharedFactory1.effect1ViewController.isON = !ViewControllerFactory1.sharedFactory1.effect1ViewController.isON
         }
@@ -159,12 +159,12 @@ class SelectorViewController: UIViewController {
         }
         update()
         
-        NSNotificationCenter.defaultCenter().postNotificationName("ByPass1ButtonPressed", object: nil)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "ByPass1ButtonPressed"), object: nil)
     }
     
     
-    @IBAction func Effect2Button(sender: AnyObject) {
-        NSNotificationCenter.defaultCenter().postNotificationName(mySpecialNotificationKey, object: nil, userInfo: ["VC" : 2])
+    @IBAction func Effect2Button(_ sender: AnyObject) {
+        NotificationCenter.default.post(name: Notification.Name(rawValue: mySpecialNotificationKey), object: nil, userInfo: ["VC" : 2])
         self.isEffect1 = false
         self.isEffect2 = true
         self.isEffect3 = false
@@ -175,9 +175,9 @@ class SelectorViewController: UIViewController {
         update()
     }
     
-    @IBAction func ByPass2Button(sender: AnyObject) {
+    @IBAction func ByPass2Button(_ sender: AnyObject) {
         isByPass2 = !isByPass2
-        NSNotificationCenter.defaultCenter().postNotificationName("ByPass2ButtonPressed", object: nil)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "ByPass2ButtonPressed"), object: nil)
         
         if(isPreset1){
             ViewControllerFactory1.sharedFactory1.effect2ViewController.isON = !ViewControllerFactory1.sharedFactory1.effect2ViewController.isON
@@ -188,12 +188,12 @@ class SelectorViewController: UIViewController {
         if(isPreset3){
             ViewControllerFactory3.sharedFactory3.effect2ViewController.isON = !ViewControllerFactory3.sharedFactory3.effect2ViewController.isON
         }
-        NSNotificationCenter.defaultCenter().postNotificationName("ByPass2ButtonPressed", object: nil)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "ByPass2ButtonPressed"), object: nil)
         update()
     }
     
-    @IBAction func Effect3Button(sender: AnyObject) {
-        NSNotificationCenter.defaultCenter().postNotificationName(mySpecialNotificationKey, object: nil, userInfo: ["VC" : 3])
+    @IBAction func Effect3Button(_ sender: AnyObject) {
+        NotificationCenter.default.post(name: Notification.Name(rawValue: mySpecialNotificationKey), object: nil, userInfo: ["VC" : 3])
         self.isEffect1 = false
         self.isEffect2 = false
         self.isEffect3 = true
@@ -204,9 +204,9 @@ class SelectorViewController: UIViewController {
         update()
     }
     
-    @IBAction func ByPass3Button(sender: AnyObject) {
+    @IBAction func ByPass3Button(_ sender: AnyObject) {
         isByPass3 = !isByPass3
-        NSNotificationCenter.defaultCenter().postNotificationName("ByPass3ButtonPressed", object: nil)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "ByPass3ButtonPressed"), object: nil)
         update()
         if(isPreset1){
             ViewControllerFactory1.sharedFactory1.effect3ViewController.isON = !ViewControllerFactory1.sharedFactory1.effect3ViewController.isON
@@ -217,14 +217,14 @@ class SelectorViewController: UIViewController {
         if(isPreset3){
             ViewControllerFactory3.sharedFactory3.effect3ViewController.isON = !ViewControllerFactory3.sharedFactory3.effect3ViewController.isON
         }
-        NSNotificationCenter.defaultCenter().postNotificationName("ByPass3ButtonPressed", object: nil)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "ByPass3ButtonPressed"), object: nil)
         update()
 
     }
     
     
-    @IBAction func Effect4Button(sender: AnyObject) {
-        NSNotificationCenter.defaultCenter().postNotificationName(mySpecialNotificationKey, object: nil, userInfo: ["VC" : 4])
+    @IBAction func Effect4Button(_ sender: AnyObject) {
+        NotificationCenter.default.post(name: Notification.Name(rawValue: mySpecialNotificationKey), object: nil, userInfo: ["VC" : 4])
         self.isEffect1 = false
         self.isEffect2 = false
         self.isEffect3 = false
@@ -235,9 +235,9 @@ class SelectorViewController: UIViewController {
         update()
     }
     
-    @IBAction func ByPass4Button(sender: AnyObject) {
+    @IBAction func ByPass4Button(_ sender: AnyObject) {
         isByPass4 = !isByPass4
-        NSNotificationCenter.defaultCenter().postNotificationName("ByPass4ButtonPressed", object: nil)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "ByPass4ButtonPressed"), object: nil)
         
         if(isPreset1){
             ViewControllerFactory1.sharedFactory1.effect4ViewController.isON = !ViewControllerFactory1.sharedFactory1.effect4ViewController.isON
@@ -248,13 +248,13 @@ class SelectorViewController: UIViewController {
         if(isPreset3){
             ViewControllerFactory3.sharedFactory3.effect4ViewController.isON = !ViewControllerFactory3.sharedFactory3.effect4ViewController.isON
         }
-    NSNotificationCenter.defaultCenter().postNotificationName("ByPass4ButtonPressed", object: nil)
+    NotificationCenter.default.post(name: Notification.Name(rawValue: "ByPass4ButtonPressed"), object: nil)
     update()
     }
     
     
-    @IBAction func Effect5Button(sender: AnyObject) {
-        NSNotificationCenter.defaultCenter().postNotificationName(mySpecialNotificationKey, object: nil, userInfo: ["VC" : 5])
+    @IBAction func Effect5Button(_ sender: AnyObject) {
+        NotificationCenter.default.post(name: Notification.Name(rawValue: mySpecialNotificationKey), object: nil, userInfo: ["VC" : 5])
         self.isEffect1 = false
         self.isEffect2 = false
         self.isEffect3 = false
@@ -265,9 +265,9 @@ class SelectorViewController: UIViewController {
         update()
     }
     
-    @IBAction func ByPass5Button(sender: AnyObject) {
+    @IBAction func ByPass5Button(_ sender: AnyObject) {
         isByPass5 = !isByPass5
-        NSNotificationCenter.defaultCenter().postNotificationName("ByPass5ButtonPressed", object: nil)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "ByPass5ButtonPressed"), object: nil)
         if(isPreset1){
             ViewControllerFactory1.sharedFactory1.effect5ViewController.isON = !ViewControllerFactory1.sharedFactory1.effect5ViewController.isON
         }
@@ -277,13 +277,13 @@ class SelectorViewController: UIViewController {
         if(isPreset3){
             ViewControllerFactory3.sharedFactory3.effect5ViewController.isON = !ViewControllerFactory3.sharedFactory3.effect5ViewController.isON
         }
-        NSNotificationCenter.defaultCenter().postNotificationName("ByPass5ButtonPressed", object: nil)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "ByPass5ButtonPressed"), object: nil)
         update()
     }
     
 
-    @IBAction func Effect6Button(sender: AnyObject) {
-        NSNotificationCenter.defaultCenter().postNotificationName(mySpecialNotificationKey, object: nil, userInfo: ["VC" : 6])
+    @IBAction func Effect6Button(_ sender: AnyObject) {
+        NotificationCenter.default.post(name: Notification.Name(rawValue: mySpecialNotificationKey), object: nil, userInfo: ["VC" : 6])
         self.isEffect1 = false
         self.isEffect2 = false
         self.isEffect3 = false
@@ -294,9 +294,9 @@ class SelectorViewController: UIViewController {
         update()
     }
     
-    @IBAction func ByPass6Button(sender: AnyObject) {
+    @IBAction func ByPass6Button(_ sender: AnyObject) {
         isByPass6 = !isByPass6
-        NSNotificationCenter.defaultCenter().postNotificationName("ByPass6ButtonPressed", object: nil)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "ByPass6ButtonPressed"), object: nil)
         if(isPreset1){
             ViewControllerFactory1.sharedFactory1.effect6ViewController.isON = !ViewControllerFactory1.sharedFactory1.effect6ViewController.isON
         }
@@ -306,14 +306,14 @@ class SelectorViewController: UIViewController {
         if(isPreset3){
             ViewControllerFactory3.sharedFactory3.effect6ViewController.isON = !ViewControllerFactory3.sharedFactory3.effect6ViewController.isON
         }
-        NSNotificationCenter.defaultCenter().postNotificationName("ByPass6ButtonPressed", object: nil)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "ByPass6ButtonPressed"), object: nil)
 
         update()
     }
 
     
-    @IBAction func Effect7Button(sender: AnyObject) {
-        NSNotificationCenter.defaultCenter().postNotificationName(mySpecialNotificationKey, object: nil, userInfo: ["VC" : 7])
+    @IBAction func Effect7Button(_ sender: AnyObject) {
+        NotificationCenter.default.post(name: Notification.Name(rawValue: mySpecialNotificationKey), object: nil, userInfo: ["VC" : 7])
         self.isEffect1 = false
         self.isEffect2 = false
         self.isEffect3 = false
@@ -324,9 +324,9 @@ class SelectorViewController: UIViewController {
         update()
     }
     
-    @IBAction func ByPass7Button(sender: AnyObject) {
+    @IBAction func ByPass7Button(_ sender: AnyObject) {
         isByPass7 = !isByPass7
-        NSNotificationCenter.defaultCenter().postNotificationName("ByPass7ButtonPressed", object: nil)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "ByPass7ButtonPressed"), object: nil)
         if(isPreset1){
             ViewControllerFactory1.sharedFactory1.effect7ViewController.isON = !ViewControllerFactory1.sharedFactory1.effect7ViewController.isON
         }
@@ -336,7 +336,7 @@ class SelectorViewController: UIViewController {
         if(isPreset3){
             ViewControllerFactory3.sharedFactory3.effect7ViewController.isON = !ViewControllerFactory3.sharedFactory3.effect7ViewController.isON
         }
-        NSNotificationCenter.defaultCenter().postNotificationName("ByPass7ButtonPressed", object: nil)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "ByPass7ButtonPressed"), object: nil)
         update()
     }
     
@@ -395,46 +395,46 @@ class SelectorViewController: UIViewController {
         }
     
         if (isEffect1){
-        self.Effect1.setImage(UIImage(named: "overdriveButtonPressed.png"), forState: UIControlState.Normal)
+        self.Effect1.setImage(UIImage(named: "overdriveButtonPressed.png"), for: UIControlState())
         }
         else{
-        self.Effect1.setImage(UIImage(named: "overdriveButton.png"), forState: .Normal)
+        self.Effect1.setImage(UIImage(named: "overdriveButton.png"), for: UIControlState())
         }
         if (isEffect2){
-            self.Effect2.setImage(UIImage(named: "delayButtonPressed.png"), forState: UIControlState.Normal)
+            self.Effect2.setImage(UIImage(named: "delayButtonPressed.png"), for: UIControlState())
         }
         else{
-            self.Effect2.setImage(UIImage(named: "delayButton.png"), forState: .Normal)
+            self.Effect2.setImage(UIImage(named: "delayButton.png"), for: UIControlState())
         }
         if (isEffect3){
-            self.Effect3.setImage(UIImage(named: "EQButtonPressed.png"), forState: UIControlState.Normal)
+            self.Effect3.setImage(UIImage(named: "EQButtonPressed.png"), for: UIControlState())
         }
         else{
-            self.Effect3.setImage(UIImage(named: "EQButton.png"), forState: .Normal)
+            self.Effect3.setImage(UIImage(named: "EQButton.png"), for: UIControlState())
         }
         if (isEffect4){
-            self.Effect4.setImage(UIImage(named: "flangerButtonPressed.png"), forState: UIControlState.Normal)
+            self.Effect4.setImage(UIImage(named: "flangerButtonPressed.png"), for: UIControlState())
         }
         else{
-            self.Effect4.setImage(UIImage(named: "flangerButton.png"), forState: .Normal)
+            self.Effect4.setImage(UIImage(named: "flangerButton.png"), for: UIControlState())
         }
         if (isEffect5){
-            self.Effect5.setImage(UIImage(named: "TremoloButtonPressed.png"), forState: UIControlState.Normal)
+            self.Effect5.setImage(UIImage(named: "TremoloButtonPressed.png"), for: UIControlState())
         }
         else{
-            self.Effect5.setImage(UIImage(named: "tremoloButton.png"), forState: .Normal)
+            self.Effect5.setImage(UIImage(named: "tremoloButton.png"), for: UIControlState())
         }
         if (isEffect6){
-            self.Effect6.setImage(UIImage(named: "reverbButtonPressed.png"), forState: UIControlState.Normal)
+            self.Effect6.setImage(UIImage(named: "reverbButtonPressed.png"), for: UIControlState())
         }
         else{
-            self.Effect6.setImage(UIImage(named: "reverbButton.png"), forState: .Normal)
+            self.Effect6.setImage(UIImage(named: "reverbButton.png"), for: UIControlState())
         }
         if (isEffect7){
-            self.Effect7.setImage(UIImage(named: "looperButtonPressed.png"), forState: UIControlState.Normal)
+            self.Effect7.setImage(UIImage(named: "looperButtonPressed.png"), for: UIControlState())
         }
         else{
-            self.Effect7.setImage(UIImage(named: "looperButton.png"), forState: .Normal)
+            self.Effect7.setImage(UIImage(named: "looperButton.png"), for: UIControlState())
         }
 
     }
@@ -476,8 +476,8 @@ class SelectorViewController: UIViewController {
     
 
     func buyEffect1 () {
-    self.Effect7.hidden = false
-    self.ByPass7.hidden = false
+    self.Effect7.isHidden = false
+    self.ByPass7.isHidden = false
     }
     
     

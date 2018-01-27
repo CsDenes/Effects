@@ -1,11 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="m3C-c6-UYb">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="m3C-c6-UYb">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Main View Controller-->
@@ -17,13 +21,13 @@
                         <viewControllerLayoutGuide type="bottom" id="t2F-3Q-nmA"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="w2B-6N-MG7">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zcs-dn-vtX">
+                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zcs-dn-vtX">
                                 <rect key="frame" x="34" y="250" width="566" height="350"/>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rnM-FV-g41">
+                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rnM-FV-g41">
                                 <rect key="frame" x="0.0" y="250" width="35" height="350"/>
                                 <connections>
                                     <segue destination="B0u-kw-emG" kind="embed" id="Ytc-q9-6aA"/>
@@ -39,7 +43,7 @@
                                 </connections>
                             </containerView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="kHo-Dq-t3Y" firstAttribute="leading" secondItem="w2B-6N-MG7" secondAttribute="leading" id="0Jn-QL-RsK"/>
                             <constraint firstItem="rnM-FV-g41" firstAttribute="leading" secondItem="w2B-6N-MG7" secondAttribute="leading" id="6QV-r2-Frc"/>
@@ -60,7 +64,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lBb-5p-WVg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117" y="972"/>
+            <point key="canvasLocation" x="190" y="1325"/>
         </scene>
         <!--Selector View Controller-->
         <scene sceneID="ZQc-p4-0w8">
@@ -298,7 +302,7 @@
                                 </variation>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="tya-Pb-H3W" secondAttribute="trailing" constant="40" id="3uI-dg-JMR"/>
                             <constraint firstItem="LOR-fM-bz2" firstAttribute="top" secondItem="0gB-n7-u6N" secondAttribute="bottom" constant="-20" id="73O-97-IYp"/>
@@ -341,23 +345,23 @@
                         <viewControllerLayoutGuide type="bottom" id="X1k-0X-I2x"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vyE-am-tiu">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="q1z-16-3Q8">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="main_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="q1z-16-3Q8">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Overdrive.png" translatesAutoresizingMaskIntoConstraints="NO" id="iSR-s8-UH8">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Overdrive.png" translatesAutoresizingMaskIntoConstraints="NO" id="iSR-s8-UH8">
                                 <rect key="frame" x="20" y="90" width="560" height="440"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lightOff.png" translatesAutoresizingMaskIntoConstraints="NO" id="rzA-9d-JCj">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="lightOff.png" translatesAutoresizingMaskIntoConstraints="NO" id="rzA-9d-JCj">
                                 <rect key="frame" x="303" y="32" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="4V2-6r-1e4"/>
                                     <constraint firstAttribute="height" constant="20" id="fwa-5u-h6a"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bLe-b1-mpK">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bLe-b1-mpK">
                                 <rect key="frame" x="205" y="50" width="220" height="220"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="OverdrivePot.png" translatesAutoresizingMaskIntoConstraints="NO" id="tU1-7H-XYN">
@@ -367,7 +371,7 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="tU1-7H-XYN" firstAttribute="centerX" secondItem="bLe-b1-mpK" secondAttribute="centerX" id="I9A-Gx-KL0"/>
                                     <constraint firstItem="tU1-7H-XYN" firstAttribute="centerY" secondItem="bLe-b1-mpK" secondAttribute="centerY" id="UIF-B5-Tqt"/>
@@ -375,16 +379,16 @@
                                     <constraint firstItem="tU1-7H-XYN" firstAttribute="width" secondItem="bLe-b1-mpK" secondAttribute="height" multiplier="1:2" id="jBa-nX-2Wp"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QcA-gk-GEF">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QcA-gk-GEF">
                                 <rect key="frame" x="265" y="392" width="100" height="100"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="kTa-Hc-oDP"/>
                                     <constraint firstAttribute="height" constant="100" id="oRz-jV-Na9"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="rzA-9d-JCj" firstAttribute="centerX" secondItem="iSR-s8-UH8" secondAttribute="centerX" constant="13" id="5pc-l6-ccU"/>
                             <constraint firstItem="q1z-16-3Q8" firstAttribute="leading" secondItem="vyE-am-tiu" secondAttribute="leading" id="8KC-Kt-cfn"/>
@@ -476,7 +480,7 @@
                                         <state key="normal" title="Button"/>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="ftL-Px-1uv" secondAttribute="trailing" constant="5" id="1iD-2V-QNa"/>
                                     <constraint firstItem="h7z-NK-bGL" firstAttribute="leading" secondItem="gda-y7-NGr" secondAttribute="leading" constant="5" id="6sz-Q5-WBU"/>
@@ -504,7 +508,7 @@
                                             <constraint firstAttribute="height" constant="12" id="ih5-Ww-RgB"/>
                                             <constraint firstAttribute="width" constant="220" id="uQ7-F6-gDw"/>
                                         </constraints>
-                                        <color key="trackTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="trackTintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                     </progressView>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" progressImage="progress.png" translatesAutoresizingMaskIntoConstraints="NO" id="pI0-bn-htD">
                                         <rect key="frame" x="-58" y="20" width="77" height="12"/>
@@ -512,10 +516,10 @@
                                             <constraint firstAttribute="height" constant="12" id="3gt-Y5-ISX"/>
                                             <constraint firstAttribute="width" constant="220" id="lwR-5y-1DM"/>
                                         </constraints>
-                                        <color key="trackTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="trackTintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                     </progressView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="8El-IZ-KD2"/>
                                     <constraint firstItem="pI0-bn-htD" firstAttribute="leading" secondItem="aYl-Ao-GCO" secondAttribute="leading" constant="30" id="9ME-dU-9HI"/>
@@ -525,7 +529,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" name="controlShadowColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" red="0.55676333109537768" green="0.55676333109537768" blue="0.55676333109537768" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="gda-y7-NGr" firstAttribute="leading" secondItem="ELY-ZG-vUn" secondAttribute="leading" id="2HG-vo-MXq"/>
                             <constraint firstItem="r0B-c9-oFo" firstAttribute="top" secondItem="aYl-Ao-GCO" secondAttribute="bottom" id="3vw-UI-dNZ"/>
@@ -565,33 +569,33 @@
                         <viewControllerLayoutGuide type="bottom" id="J8G-TB-TC6"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Z9Y-KT-ta4">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="uIW-wx-XIW">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="main_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="uIW-wx-XIW">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Delay.png" translatesAutoresizingMaskIntoConstraints="NO" id="XGM-0n-OLE">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Delay.png" translatesAutoresizingMaskIntoConstraints="NO" id="XGM-0n-OLE">
                                 <rect key="frame" x="20" y="90" width="560" height="440"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redLed.png" translatesAutoresizingMaskIntoConstraints="NO" id="mCQ-oX-06B">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="redLed.png" translatesAutoresizingMaskIntoConstraints="NO" id="mCQ-oX-06B">
                                 <rect key="frame" x="280" y="76" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="HGW-pk-vAa"/>
                                     <constraint firstAttribute="width" constant="40" id="rik-5b-uFF"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2FJ-0x-o7P">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2FJ-0x-o7P">
                                 <rect key="frame" x="127" y="117" width="146" height="146"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="delayPot.png" translatesAutoresizingMaskIntoConstraints="NO" id="vEe-de-0AO">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="delayPot.png" translatesAutoresizingMaskIntoConstraints="NO" id="vEe-de-0AO">
                                         <rect key="frame" x="25" y="25" width="97" height="97"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="vEe-de-0AO" secondAttribute="height" multiplier="1:1" id="aYF-Hm-Ks4"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="vEe-de-0AO" firstAttribute="centerX" secondItem="2FJ-0x-o7P" secondAttribute="centerX" id="8lb-pu-gvz"/>
                                     <constraint firstItem="vEe-de-0AO" firstAttribute="centerY" secondItem="2FJ-0x-o7P" secondAttribute="centerY" id="Hax-Jm-phv"/>
@@ -599,25 +603,25 @@
                                     <constraint firstAttribute="width" secondItem="2FJ-0x-o7P" secondAttribute="height" multiplier="1:1" id="gcN-1D-0zz"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2YS-mB-SOC">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2YS-mB-SOC">
                                 <rect key="frame" x="240" y="320" width="150" height="100"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="Gbz-eR-DSb"/>
                                     <constraint firstAttribute="height" constant="100" id="XT1-bg-ceZ"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8mn-gW-hgQ">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8mn-gW-hgQ">
                                 <rect key="frame" x="327" y="117" width="146" height="146"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="delayPot.png" translatesAutoresizingMaskIntoConstraints="NO" id="36i-Oz-0iN">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="delayPot.png" translatesAutoresizingMaskIntoConstraints="NO" id="36i-Oz-0iN">
                                         <rect key="frame" x="25" y="25" width="97" height="97"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="36i-Oz-0iN" secondAttribute="height" multiplier="1:1" id="yKq-6p-VhW"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="36i-Oz-0iN" firstAttribute="centerY" secondItem="8mn-gW-hgQ" secondAttribute="centerY" id="7Ms-du-C0i"/>
                                     <constraint firstItem="36i-Oz-0iN" firstAttribute="width" secondItem="8mn-gW-hgQ" secondAttribute="height" multiplier="2:3" id="ErM-Ac-8q4"/>
@@ -626,7 +630,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="uIW-wx-XIW" secondAttribute="trailing" id="1tJ-2k-vVW"/>
                             <constraint firstItem="8mn-gW-hgQ" firstAttribute="centerX" secondItem="XGM-0n-OLE" secondAttribute="centerX" constant="100" id="4WI-qK-jfX"/>
@@ -671,24 +675,24 @@
                         <viewControllerLayoutGuide type="bottom" id="IDm-cN-s6l"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ef8-Ba-MSb">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="2bb-8t-2fO">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="main_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="2bb-8t-2fO">
                                 <rect key="frame" x="0.0" y="20" width="600" height="588"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EQ.png" translatesAutoresizingMaskIntoConstraints="NO" id="lpb-gs-QYu">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="EQ.png" translatesAutoresizingMaskIntoConstraints="NO" id="lpb-gs-QYu">
                                 <rect key="frame" x="120" y="50" width="360" height="520"/>
                             </imageView>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qju-AE-sUy">
                                 <rect key="frame" x="225" y="368" width="150" height="100"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="acs-4a-01b"/>
                                     <constraint firstAttribute="width" constant="150" id="uot-Kd-8gi"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lightOff.png" translatesAutoresizingMaskIntoConstraints="NO" id="Zyp-zd-3ou">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="lightOff.png" translatesAutoresizingMaskIntoConstraints="NO" id="Zyp-zd-3ou">
                                 <rect key="frame" x="280" y="140" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="BSJ-cr-L9H"/>
@@ -697,8 +701,8 @@
                             </imageView>
                             <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Gtl-gq-SXQ">
                                 <rect key="frame" x="140" y="307" width="118" height="31"/>
-                                <color key="minimumTrackTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="maximumTrackTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="minimumTrackTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="maximumTrackTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.transform.rotation.z">
                                         <real key="value" value="-1.571"/>
@@ -710,8 +714,8 @@
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="yKh-mg-lms">
                                 <rect key="frame" x="140" y="355" width="118" height="31"/>
-                                <color key="minimumTrackTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="maximumTrackTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="minimumTrackTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="maximumTrackTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.transform.rotation.z">
                                         <real key="value" value="-1.571"/>
@@ -723,8 +727,8 @@
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="xXx-WL-1XO">
                                 <rect key="frame" x="140" y="411" width="118" height="31"/>
-                                <color key="minimumTrackTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="maximumTrackTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="minimumTrackTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="maximumTrackTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.transform.rotation.z">
                                         <real key="value" value="-1.571"/>
@@ -740,8 +744,8 @@
                                     <constraint firstAttribute="width" constant="180" id="klO-M7-v6A"/>
                                     <constraint firstAttribute="height" constant="30" id="p4u-72-WOo"/>
                                 </constraints>
-                                <color key="minimumTrackTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="maximumTrackTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="minimumTrackTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="maximumTrackTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.transform.rotation.z">
                                         <real key="value" value="-1.571"/>
@@ -753,8 +757,8 @@
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ux8-MA-ZWI">
                                 <rect key="frame" x="107" y="476" width="118" height="31"/>
-                                <color key="minimumTrackTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="maximumTrackTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="minimumTrackTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="maximumTrackTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.transform.rotation.z">
                                         <real key="value" value="-1.571"/>
@@ -766,8 +770,8 @@
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="VDM-5j-TMo">
                                 <rect key="frame" x="140" y="228" width="118" height="31"/>
-                                <color key="minimumTrackTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="maximumTrackTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="minimumTrackTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="maximumTrackTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.transform.rotation.z">
                                         <real key="value" value="-1.571"/>
@@ -778,7 +782,7 @@
                                 </connections>
                             </slider>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Gtl-gq-SXQ" firstAttribute="height" secondItem="VDM-5j-TMo" secondAttribute="height" id="2ju-vg-Uly"/>
                             <constraint firstItem="VDM-5j-TMo" firstAttribute="height" secondItem="HWE-sH-k19" secondAttribute="height" id="5hS-vv-5Vc"/>
@@ -840,33 +844,33 @@
                         <viewControllerLayoutGuide type="bottom" id="a1Z-nH-KnU"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="mQL-VP-l9u">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="UTO-oG-MJs">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="main_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="UTO-oG-MJs">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Flanger.png" translatesAutoresizingMaskIntoConstraints="NO" id="HTD-je-qbG">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Flanger.png" translatesAutoresizingMaskIntoConstraints="NO" id="HTD-je-qbG">
                                 <rect key="frame" x="150" y="90" width="300" height="440"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lightOff.png" translatesAutoresizingMaskIntoConstraints="NO" id="DvV-m9-zfW">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="lightOff.png" translatesAutoresizingMaskIntoConstraints="NO" id="DvV-m9-zfW">
                                 <rect key="frame" x="280" y="260" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="9yJ-wc-GaI"/>
                                     <constraint firstAttribute="width" constant="40" id="EiU-HH-uHq"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZNd-4f-onF">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZNd-4f-onF">
                                 <rect key="frame" x="127" y="77" width="146" height="146"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flangerPot" translatesAutoresizingMaskIntoConstraints="NO" id="C4E-Kd-YJw">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="flangerPot" translatesAutoresizingMaskIntoConstraints="NO" id="C4E-Kd-YJw">
                                         <rect key="frame" x="25" y="25" width="97" height="97"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="C4E-Kd-YJw" secondAttribute="height" multiplier="1:1" id="930-nI-9Yu"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="C4E-Kd-YJw" firstAttribute="centerY" secondItem="ZNd-4f-onF" secondAttribute="centerY" id="HEt-Hx-7Zz"/>
                                     <constraint firstAttribute="width" secondItem="ZNd-4f-onF" secondAttribute="height" multiplier="1:1" id="f3w-W5-PfQ"/>
@@ -874,25 +878,25 @@
                                     <constraint firstItem="C4E-Kd-YJw" firstAttribute="width" secondItem="ZNd-4f-onF" secondAttribute="height" multiplier="2:3" id="uib-Ph-hcW"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sd5-jk-NaF">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sd5-jk-NaF">
                                 <rect key="frame" x="240" y="320" width="150" height="100"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="hoN-xP-zJ8"/>
                                     <constraint firstAttribute="width" constant="150" id="wza-QU-s2W"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9l3-GN-NVa">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9l3-GN-NVa">
                                 <rect key="frame" x="327" y="77" width="146" height="146"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flangerPot" translatesAutoresizingMaskIntoConstraints="NO" id="RcC-Jt-KJe">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="flangerPot" translatesAutoresizingMaskIntoConstraints="NO" id="RcC-Jt-KJe">
                                         <rect key="frame" x="25" y="24" width="97" height="97"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="RcC-Jt-KJe" secondAttribute="height" multiplier="1:1" id="Jfo-F7-4L0"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="9l3-GN-NVa" secondAttribute="height" multiplier="1:1" id="1vD-08-JyQ"/>
                                     <constraint firstItem="RcC-Jt-KJe" firstAttribute="centerX" secondItem="9l3-GN-NVa" secondAttribute="centerX" id="Hlr-CZ-wt8"/>
@@ -901,7 +905,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="9l3-GN-NVa" firstAttribute="width" secondItem="HTD-je-qbG" secondAttribute="height" multiplier="1:3" id="05X-ry-ewa"/>
                             <constraint firstItem="9l3-GN-NVa" firstAttribute="centerY" secondItem="HTD-je-qbG" secondAttribute="centerY" constant="-160" id="7yY-TQ-QGL"/>
@@ -946,26 +950,26 @@
                         <viewControllerLayoutGuide type="bottom" id="Hp5-hx-Jqp"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="T9j-w4-nkT">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="tir-Tg-Q59">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="main_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="tir-Tg-Q59">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tremolo.png" translatesAutoresizingMaskIntoConstraints="NO" id="3As-nC-QoS">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Tremolo.png" translatesAutoresizingMaskIntoConstraints="NO" id="3As-nC-QoS">
                                 <rect key="frame" x="150" y="90" width="300" height="440"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yYv-Cf-xAa">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yYv-Cf-xAa">
                                 <rect key="frame" x="190" y="80" width="220" height="220"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="delayPot.png" translatesAutoresizingMaskIntoConstraints="NO" id="Mtg-Mk-IMW">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="delayPot.png" translatesAutoresizingMaskIntoConstraints="NO" id="Mtg-Mk-IMW">
                                         <rect key="frame" x="37" y="37" width="147" height="147"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Mtg-Mk-IMW" secondAttribute="height" multiplier="1:1" id="iX8-Pc-np9"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="Mtg-Mk-IMW" firstAttribute="centerY" secondItem="yYv-Cf-xAa" secondAttribute="centerY" id="ACe-Eb-ChO"/>
                                     <constraint firstItem="Mtg-Mk-IMW" firstAttribute="centerX" secondItem="yYv-Cf-xAa" secondAttribute="centerX" id="IHf-bx-gK2"/>
@@ -973,23 +977,23 @@
                                     <constraint firstItem="Mtg-Mk-IMW" firstAttribute="width" secondItem="yYv-Cf-xAa" secondAttribute="height" multiplier="2:3" id="w34-fJ-dIb"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fGv-Wi-38o">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fGv-Wi-38o">
                                 <rect key="frame" x="280" y="40" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="N1L-Pe-Xvh"/>
                                     <constraint firstAttribute="width" constant="40" id="xly-A2-xls"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lIx-AT-Ja5">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lIx-AT-Ja5">
                                 <rect key="frame" x="240" y="320" width="150" height="100"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="U18-PD-65A"/>
                                     <constraint firstAttribute="height" constant="100" id="mAm-CA-Y73"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="yYv-Cf-xAa" firstAttribute="centerY" secondItem="3As-nC-QoS" secondAttribute="centerY" constant="-120" id="3gN-PA-GUw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3As-nC-QoS" secondAttribute="trailing" constant="130" id="48E-xS-pyA"/>
@@ -1027,33 +1031,33 @@
                         <viewControllerLayoutGuide type="bottom" id="PKg-Sw-vsO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="D1h-E9-Wwb">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="Af2-qh-aVJ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="main_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="Af2-qh-aVJ">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Reverb.png" translatesAutoresizingMaskIntoConstraints="NO" id="B9l-yI-Ov0">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Reverb.png" translatesAutoresizingMaskIntoConstraints="NO" id="B9l-yI-Ov0">
                                 <rect key="frame" x="150" y="90" width="300" height="440"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1bg-UL-rAA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1bg-UL-rAA">
                                 <rect key="frame" x="280" y="76" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="JI4-wL-7BT"/>
                                     <constraint firstAttribute="width" constant="40" id="pUg-9M-kJo"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lkf-ji-iEK">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lkf-ji-iEK">
                                 <rect key="frame" x="127" y="117" width="146" height="146"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reverbPot.png" translatesAutoresizingMaskIntoConstraints="NO" id="wfM-u2-BAa">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="reverbPot.png" translatesAutoresizingMaskIntoConstraints="NO" id="wfM-u2-BAa">
                                         <rect key="frame" x="25" y="25" width="97" height="97"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="wfM-u2-BAa" secondAttribute="height" multiplier="1:1" id="77s-sx-hbH"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="wfM-u2-BAa" firstAttribute="centerX" secondItem="Lkf-ji-iEK" secondAttribute="centerX" id="gyc-u3-dWG"/>
                                     <constraint firstItem="wfM-u2-BAa" firstAttribute="centerY" secondItem="Lkf-ji-iEK" secondAttribute="centerY" id="kmF-pf-nli"/>
@@ -1061,25 +1065,25 @@
                                     <constraint firstItem="wfM-u2-BAa" firstAttribute="width" secondItem="Lkf-ji-iEK" secondAttribute="height" multiplier="2:3" id="xdZ-4b-fD5"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sAA-Kv-kAb">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sAA-Kv-kAb">
                                 <rect key="frame" x="240" y="320" width="150" height="100"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="g8K-eQ-tKz"/>
                                     <constraint firstAttribute="height" constant="100" id="sm3-j6-Io2"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jcb-nY-XQo">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jcb-nY-XQo">
                                 <rect key="frame" x="327" y="117" width="146" height="146"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reverbPot.png" translatesAutoresizingMaskIntoConstraints="NO" id="yXc-SO-CPk">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="reverbPot.png" translatesAutoresizingMaskIntoConstraints="NO" id="yXc-SO-CPk">
                                         <rect key="frame" x="25" y="25" width="97" height="97"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="yXc-SO-CPk" secondAttribute="height" multiplier="1:1" id="G7U-Y1-y51"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="yXc-SO-CPk" firstAttribute="centerX" secondItem="Jcb-nY-XQo" secondAttribute="centerX" id="04i-7m-YiR"/>
                                     <constraint firstItem="yXc-SO-CPk" firstAttribute="centerY" secondItem="Jcb-nY-XQo" secondAttribute="centerY" id="CW9-kT-YDq"/>
@@ -1088,7 +1092,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="1bg-UL-rAA" firstAttribute="centerY" secondItem="B9l-yI-Ov0" secondAttribute="centerY" constant="-214" id="1ab-hG-fY4"/>
                             <constraint firstItem="B9l-yI-Ov0" firstAttribute="leading" secondItem="D1h-E9-Wwb" secondAttribute="leadingMargin" constant="130" id="2IC-nc-eC3"/>
@@ -1131,17 +1135,18 @@
                         <viewControllerLayoutGuide type="bottom" id="GZW-GZ-Vua"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Mxy-hC-CYt">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Mf1-6G-kmB">
                                 <rect key="frame" x="254" y="285" width="118" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </slider>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="PopBackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="1LW-4K-Xtf">
                                 <rect key="frame" x="-16" y="28" width="560" height="580"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="1LW-4K-Xtf" secondAttribute="trailing" id="5qC-h6-YAk"/>
                             <constraint firstItem="1LW-4K-Xtf" firstAttribute="top" secondItem="ai5-Ll-B29" secondAttribute="bottom" id="Uab-mA-KwY"/>
@@ -1163,32 +1168,32 @@
                         <viewControllerLayoutGuide type="bottom" id="1o0-RR-Ojl"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="C1e-76-Q7n">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="DLq-VX-tRG">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="main_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="DLq-VX-tRG">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Looper.png" translatesAutoresizingMaskIntoConstraints="NO" id="t6S-Rg-pev">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Looper.png" translatesAutoresizingMaskIntoConstraints="NO" id="t6S-Rg-pev">
                                 <rect key="frame" x="190" y="90" width="220" height="440"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Gs-pV-x9w">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Gs-pV-x9w">
                                 <rect key="frame" x="280" y="76" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="E5h-8d-bLs"/>
                                     <constraint firstAttribute="height" constant="40" id="iTa-OE-jmz"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e7l-AS-pRv">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e7l-AS-pRv">
                                 <rect key="frame" x="165" y="300" width="300" height="200"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="Mg7-af-TiO"/>
                                     <constraint firstAttribute="width" constant="300" id="bDf-01-F29"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="8Gs-pV-x9w" firstAttribute="centerY" secondItem="t6S-Rg-pev" secondAttribute="centerY" constant="-214" id="0lO-4e-nTj"/>
                             <constraint firstItem="DLq-VX-tRG" firstAttribute="leading" secondItem="C1e-76-Q7n" secondAttribute="leading" id="9dp-HA-xma"/>

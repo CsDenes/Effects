@@ -25,7 +25,7 @@ import StoreKit
         super.init(coder: aDecoder)
     }
     
-    override init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: NSBundle!) {
+    override init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: Bundle!) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
     
@@ -34,14 +34,14 @@ import StoreKit
         
         Activity.startAnimating()
         
-        buyEffect1Button.hidden = true
-        self.view.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.6)
+        buyEffect1Button.isHidden = true
+        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.6)
         self.popUpView.layer.cornerRadius = 5
         self.popUpView.layer.shadowOpacity = 0.8
-        self.popUpView.layer.shadowOffset = CGSizeMake(0.0, 0.0)
+        self.popUpView.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
        
         
-        SKPaymentQueue.defaultQueue().addTransactionObserver(self)
+        SKPaymentQueue.default().add(self)
         requestProductData()
         
         
@@ -51,36 +51,36 @@ import StoreKit
     {
         if SKPaymentQueue.canMakePayments() {
             let request = SKProductsRequest(productIdentifiers:
-                self.productIdentifiers as! Set<String>)
+                self.productIdentifiers )
             request.delegate = self
             request.start()
         } else {
-            var alert = UIAlertController(title: "In-App Purchases Not Enabled", message: "Please enable In App Purchase in Settings", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "Settings", style: UIAlertActionStyle.Default, handler: { alertAction in
-                alert.dismissViewControllerAnimated(true, completion: nil)
+            let alert = UIAlertController(title: "In-App Purchases Not Enabled", message: "Please enable In App Purchase in Settings", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Settings", style: UIAlertActionStyle.default, handler: { alertAction in
+                alert.dismiss(animated: true, completion: nil)
                 
-                let url: NSURL? = NSURL(string: UIApplicationOpenSettingsURLString)
+                let url: URL? = URL(string: UIApplicationOpenSettingsURLString)
                 if url != nil
                 {
-                    UIApplication.sharedApplication().openURL(url!)
+                    UIApplication.shared.openURL(url!)
                 }
                 
             }))
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: { alertAction in
-                alert.dismissViewControllerAnimated(true, completion: nil)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: { alertAction in
+                alert.dismiss(animated: true, completion: nil)
             }))
-            self.presentViewController(alert, animated: true, completion: nil)
+            self.present(alert, animated: true, completion: nil)
         }
     }
 
     
-    func productsRequest(request: SKProductsRequest, didReceiveResponse response: SKProductsResponse) {
+    func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
         
         var products = response.products
        
         
         if (products.count != 0) {
-            for var i = 0; i < products.count; i++
+            for i in 0 ..< products.count
             {
                 self.product = products[i] as? SKProduct
                 self.productsArray.append(product!)
@@ -89,8 +89,8 @@ import StoreKit
         
        
         Activity.stopAnimating()
-        Activity.hidden = true
-        buyEffect1Button.hidden = false
+        Activity.isHidden = true
+        buyEffect1Button.isHidden = false
         } else {
            // print("No products found")
         }
@@ -105,7 +105,7 @@ import StoreKit
     
     
     
-    func showInView(aView: UIView!, animated: Bool)
+    func showInView(_ aView: UIView!, animated: Bool)
     {
         aView.addSubview(self.view)
         if animated
@@ -116,18 +116,18 @@ import StoreKit
     
     func showAnimate()
     {
-        self.view.transform = CGAffineTransformMakeScale(1.3, 1.3)
+        self.view.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
         self.view.alpha = 0.0;
-        UIView.animateWithDuration(0.25, animations: {
+        UIView.animate(withDuration: 0.25, animations: {
             self.view.alpha = 1.0
-            self.view.transform = CGAffineTransformMakeScale(1.0, 1.0)
+            self.view.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         });
     }
     
     func removeAnimate()
     {
-        UIView.animateWithDuration(0.25, animations: {
-            self.view.transform = CGAffineTransformMakeScale(1.3, 1.3)
+        UIView.animate(withDuration: 0.25, animations: {
+            self.view.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
             self.view.alpha = 0.0;
             }, completion:{(finished : Bool)  in
                 if (finished)
@@ -137,39 +137,39 @@ import StoreKit
         });
     }
     
-    @IBAction func closePopup(sender: AnyObject) {
+    @IBAction func closePopup(_ sender: AnyObject) {
         self.removeAnimate()
       //  print("close")
     }
     
     
-    func paymentQueue(queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
+    func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
         
         for transaction in transactions {
             
             switch transaction.transactionState {
                 
-            case SKPaymentTransactionState.Purchased:
+            case SKPaymentTransactionState.purchased:
               //  print("Transaction Approved")
               //  print("Product Identifier: \(transaction.payment.productIdentifier)")
                 self.deliverProduct(transaction)
-                SKPaymentQueue.defaultQueue().finishTransaction(transaction)
+                SKPaymentQueue.default().finishTransaction(transaction)
                 
-            case SKPaymentTransactionState.Failed:
+            case SKPaymentTransactionState.failed:
             //    print("Transaction Failed")
-                SKPaymentQueue.defaultQueue().finishTransaction(transaction)
+                SKPaymentQueue.default().finishTransaction(transaction)
             default:
                 break
             }
         }
     }
     
-    func deliverProduct(transaction:SKPaymentTransaction) {
+    func deliverProduct(_ transaction:SKPaymentTransaction) {
         
         if transaction.payment.productIdentifier == "EffectsAndD_extra_Effect1"
         {
          //   print("Consumable Product Purchased")
-            NSNotificationCenter.defaultCenter().postNotificationName("buyEffect1", object: nil)
+            NotificationCenter.default.post(name: Notification.Name(rawValue: "buyEffect1"), object: nil)
             self.removeAnimate()
         }
     }
@@ -182,9 +182,9 @@ import StoreKit
     
     
     
-    @IBAction func buyEffect1Button(sender: AnyObject) {
+    @IBAction func buyEffect1Button(_ sender: AnyObject) {
         let payment = SKPayment(product: productsArray[0])
-        SKPaymentQueue.defaultQueue().addPayment(payment)
+        SKPaymentQueue.default().add(payment)
     }
     
 }

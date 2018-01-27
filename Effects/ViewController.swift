@@ -33,7 +33,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var delaySlider: UISlider!
     
     
-    @IBAction func feedBackSliderValueChanged(sender: AnyObject) {
+    @IBAction func feedBackSliderValueChanged(_ sender: AnyObject) {
          //Feedback=Double(feedBackSlider.value)
     }
    
@@ -41,7 +41,7 @@ class ViewController: UIViewController {
     
     
     
-    @IBAction func overDriveValueChanged(sender: AnyObject) {
+    @IBAction func overDriveValueChanged(_ sender: AnyObject) {
    //     Gain=Double(overDrive.value)
     }
     @IBOutlet weak var overDrive: UISlider!
@@ -49,7 +49,7 @@ class ViewController: UIViewController {
     
     
     
-    @IBAction func sliderValueChanged(sender: AnyObject) {
+    @IBAction func sliderValueChanged(_ sender: AnyObject) {
       //  Delay=Int(delaySlider.value)
     }
     
@@ -57,8 +57,8 @@ class ViewController: UIViewController {
     return delaySlider.value
     }
     
-    @IBAction func audioSwitch(sender: UISwitch) {
-        if(self.mySwitch.on){
+    @IBAction func audioSwitch(_ sender: UISwitch) {
+        if(self.mySwitch.isOn){
             audioProcessor.start()
         }
         else {

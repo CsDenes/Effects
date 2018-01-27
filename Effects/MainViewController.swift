@@ -33,17 +33,17 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         freshEffect()
-        audioProcessor.start()
+        audioProcessor?.start()
         
-       NSNotificationCenter.defaultCenter().addObserver(self, selector: "switchEffect:", name:mySpecialNotificationKey, object: nil)
+       NotificationCenter.default.addObserver(self, selector: #selector(MainViewController.switchEffect(_:)), name:NSNotification.Name(rawValue: mySpecialNotificationKey), object: nil)
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "preset1ButtonPressed", name:Preset1ButtonKey, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(MainViewController.preset1ButtonPressed), name:NSNotification.Name(rawValue: Preset1ButtonKey), object: nil)
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "preset2ButtonPressed", name:Preset2ButtonKey, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(MainViewController.preset2ButtonPressed), name:NSNotification.Name(rawValue: Preset2ButtonKey), object: nil)
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "preset3ButtonPressed", name:Preset3ButtonKey, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(MainViewController.preset3ButtonPressed), name:NSNotification.Name(rawValue: Preset3ButtonKey), object: nil)
 
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "PopUp", name: "PopUp", object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(MainViewController.PopUp), name: NSNotification.Name(rawValue: "PopUp"), object: nil)
 
         
     
@@ -55,21 +55,21 @@ class MainViewController: UIViewController {
     }
     
 
-    func selectViewController (VC: String) {
-        let vc = mainStoryboard.instantiateViewControllerWithIdentifier(VC)
+    func selectViewController (_ VC: String) {
+        let vc = mainStoryboard.instantiateViewController(withIdentifier: VC)
         
         self.addChildViewController(vc)
         vc.view.frame = self.MainContainer.bounds
         self.MainContainer.addSubview(vc.view)
-        vc.didMoveToParentViewController(self)
+        vc.didMove(toParentViewController: self)
         
         
    
     }
     
-    func switchEffect(notification:NSNotification){
+    func switchEffect(_ notification:Notification){
     //    print(notification.userInfo)
-        self.effectNumber = notification.userInfo!["VC"] as! Int
+        self.effectNumber = (notification as NSNotification).userInfo!["VC"] as! Int
         freshEffect()
         }
     
@@ -179,11 +179,11 @@ class MainViewController: UIViewController {
     }
     
     
-    func addChild(vc: UIViewController) {
+    func addChild(_ vc: UIViewController) {
         self.addChildViewController(vc)
         vc.view.frame = self.MainContainer.bounds
         self.MainContainer.addSubview(vc.view)
-        vc.didMoveToParentViewController(self)
+        vc.didMove(toParentViewController: self)
     }
     
     

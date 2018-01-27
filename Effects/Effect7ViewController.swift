@@ -29,17 +29,17 @@ class Effect7ViewController: UIViewController {
         
         
         let tapGestrure = UITapGestureRecognizer()
-        tapGestrure.addTarget(self, action: "handleTap")
+        tapGestrure.addTarget(self, action: #selector(Effect7ViewController.handleTap))
         
         
         
         let longTapGesture = UILongPressGestureRecognizer()
-        longTapGesture.addTarget(self, action: "handleLongTap")
+        longTapGesture.addTarget(self, action: #selector(Effect7ViewController.handleLongTap))
         self.tapView.addGestureRecognizer(tapGestrure)
         self.tapView.addGestureRecognizer(longTapGesture)
         
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "switchEffect", name: "ByPass7ButtonPressed", object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(Effect7ViewController.switchEffect), name: NSNotification.Name(rawValue: "ByPass7ButtonPressed"), object: nil)
         
 
 
@@ -54,7 +54,7 @@ class Effect7ViewController: UIViewController {
     func handleTap() {
         
         if(currentLooperState == .stop){
-            NSNotificationCenter.defaultCenter().postNotificationName("setByPass7", object: nil)
+            NotificationCenter.default.post(name: Notification.Name(rawValue: "setByPass7"), object: nil)
             currentLooperState = .recordingFirstly
             self.redLed.image = UIImage(named: "redLightOn.png")
             looperIsOn = true
@@ -84,7 +84,7 @@ class Effect7ViewController: UIViewController {
             looperIsOn = false
             self.redLed.image = UIImage(named: "lightOff.png")
             looperIsOn = false
-            looperBuffer = [Double](count: looperBufferCount, repeatedValue : 0.0)
+            looperBuffer = [Double](repeating: 0.0, count: looperBufferCount)
         }
         else {  currentLooperState = .recordingFirstly
             self.redLed.image = UIImage(named: "redLightOn.png")
@@ -98,8 +98,8 @@ class Effect7ViewController: UIViewController {
         currentLooperState = .stop
         looperIsOn = false
         self.redLed.image = UIImage(named: "lightOff.png")
-         NSNotificationCenter.defaultCenter().postNotificationName("setByPass7", object: nil)
-        looperBuffer = [Double](count: looperBufferCount, repeatedValue : 0.0)
+         NotificationCenter.default.post(name: Notification.Name(rawValue: "setByPass7"), object: nil)
+        looperBuffer = [Double](repeating: 0.0, count: looperBufferCount)
         looperIndex = 0
         looperValue = 0
         }

@@ -29,18 +29,18 @@ class Effect6ViewController: UIViewController {
         redLed.image = UIImage(named: "lightOff.png")
         
         let rotationGestrure1 = UIRotationGestureRecognizer()
-        rotationGestrure1.addTarget(self, action: "handleDelayRotation:")
+        rotationGestrure1.addTarget(self, action: #selector(Effect6ViewController.handleDelayRotation(_:)))
         self.delayRotateView.addGestureRecognizer(rotationGestrure1)
         let rotationGestrure2 = UIRotationGestureRecognizer()
-        rotationGestrure2.addTarget(self, action: "handleFeedbackRotation:")
+        rotationGestrure2.addTarget(self, action: #selector(Effect6ViewController.handleFeedbackRotation(_:)))
         self.feedbackRotateView.addGestureRecognizer(rotationGestrure2)
         
         
         let tapGestrure = UITapGestureRecognizer()
-        tapGestrure.addTarget(self, action: "handleTap")
+        tapGestrure.addTarget(self, action: #selector(Effect6ViewController.handleTap))
         self.tapView.addGestureRecognizer(tapGestrure)
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "switchEffect", name: "ByPass6ButtonPressed", object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(Effect6ViewController.switchEffect), name: NSNotification.Name(rawValue: "ByPass6ButtonPressed"), object: nil)
         
         
         // Do any additional setup after loading the view.
@@ -52,23 +52,23 @@ class Effect6ViewController: UIViewController {
     }
     
     
-    func handleDelayRotation (rotationGesture : UIRotationGestureRecognizer) {
+    func handleDelayRotation (_ rotationGesture : UIRotationGestureRecognizer) {
         self.reverbValue += Float(rotationGesture.rotation) * 470
         if self.reverbValue > 2900 {self.reverbValue = 2900}
         else if self.reverbValue < 100 {self.reverbValue = 100}
         else {
-        self.delayRotateView.transform = CGAffineTransformRotate(self.delayRotateView.transform, rotationGesture.rotation)
+        self.delayRotateView.transform = self.delayRotateView.transform.rotated(by: rotationGesture.rotation)
         }
         ReverbValue = self.reverbValue
         rotationGesture.rotation = 0.0
     }
     
-    func handleFeedbackRotation (rotationGesture : UIRotationGestureRecognizer) {
+    func handleFeedbackRotation (_ rotationGesture : UIRotationGestureRecognizer) {
         self.reverbFeedback += Float(rotationGesture.rotation) / 10
         if self.reverbFeedback > 0.9 {self.reverbFeedback = 0.9}
         else if self.reverbFeedback < 0.1 {self.reverbFeedback = 0.1}
         else {
-        self.feedbackRotateView.transform = CGAffineTransformRotate(self.feedbackRotateView.transform, rotationGesture.rotation)
+        self.feedbackRotateView.transform = self.feedbackRotateView.transform.rotated(by: rotationGesture.rotation)
         }
         ReverbFeedback = self.reverbFeedback
         rotationGesture.rotation = 0.0
@@ -76,7 +76,7 @@ class Effect6ViewController: UIViewController {
     
     func handleTap() {
         
-        NSNotificationCenter.defaultCenter().postNotificationName("setByPass6", object: nil)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "setByPass6"), object: nil)
         self.isON = !isON
         if(isON){
             self.redLed.image = UIImage(named: "redLightOn.png")

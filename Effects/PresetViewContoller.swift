@@ -37,26 +37,26 @@ class PresetViewContoller: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.progressIn.transform = CGAffineTransformRotate(self.progressIn.transform, -1.571)
+        self.progressIn.transform = self.progressIn.transform.rotated(by: -1.571)
         
-        self.progressOut.transform = CGAffineTransformRotate(self.progressOut.transform, -1.571)
+        self.progressOut.transform = self.progressOut.transform.rotated(by: -1.571)
         
-        var timer = NSTimer.scheduledTimerWithTimeInterval(0.2, target: self, selector: Selector("changeProgress"), userInfo: nil, repeats: true)
+        var timer = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(PresetViewContoller.changeProgress), userInfo: nil, repeats: true)
         
         
-        Preset1.setImage(UIImage(named: "preset1.png"), forState: .Normal)
+        Preset1.setImage(UIImage(named: "preset1.png"), for: UIControlState())
         Preset1.alpha = 1
         
-        Preset2.setImage(UIImage(named: "preset2.png"), forState: .Normal)
+        Preset2.setImage(UIImage(named: "preset2.png"), for: UIControlState())
          Preset2.alpha = 0.2
         
-        Preset3.setImage(UIImage(named: "preset3.png"), forState: .Normal)
+        Preset3.setImage(UIImage(named: "preset3.png"), for: UIControlState())
          Preset3.alpha = 0.2
         
-        Metronome.setImage(UIImage(named: "metronomeButtonPressed.png"), forState: .Normal)
+        Metronome.setImage(UIImage(named: "metronomeButtonPressed.png"), for: UIControlState())
         Metronome.alpha = 0.4
         
-        Tuner.setImage(UIImage(named: "tunerButtonPressed.png"), forState: .Normal)
+        Tuner.setImage(UIImage(named: "tunerButtonPressed.png"), for: UIControlState())
         Tuner.alpha = 0.4
         
 
@@ -72,8 +72,8 @@ class PresetViewContoller: UIViewController {
     
     }
     
-    @IBAction func Preset1ButtonPressed(sender: AnyObject) {
-    NSNotificationCenter.defaultCenter().postNotificationName(Preset1ButtonKey, object: nil)
+    @IBAction func Preset1ButtonPressed(_ sender: AnyObject) {
+    NotificationCenter.default.post(name: Notification.Name(rawValue: Preset1ButtonKey), object: nil)
     Overdrivelevel = ViewControllerFactory1.sharedFactory1.effect1ViewController.overdrivelevel
     OverdriveIsOn = ViewControllerFactory1.sharedFactory1.effect1ViewController.isON
     isByPass1 = !OverdriveIsOn
@@ -114,8 +114,8 @@ class PresetViewContoller: UIViewController {
     update()
     }
 
-    @IBAction func Preset2ButtonPressed(sender: AnyObject) {
-    NSNotificationCenter.defaultCenter().postNotificationName(Preset2ButtonKey, object: nil)
+    @IBAction func Preset2ButtonPressed(_ sender: AnyObject) {
+    NotificationCenter.default.post(name: Notification.Name(rawValue: Preset2ButtonKey), object: nil)
     Overdrivelevel = ViewControllerFactory2.sharedFactory2.effect1ViewController.overdrivelevel
     OverdriveIsOn = ViewControllerFactory2.sharedFactory2.effect1ViewController.isON
     isByPass1 = !OverdriveIsOn
@@ -157,8 +157,8 @@ class PresetViewContoller: UIViewController {
     }
 
     
-    @IBAction func Preset3ButtonPressed(sender: AnyObject) {
-    NSNotificationCenter.defaultCenter().postNotificationName(Preset3ButtonKey, object: nil)
+    @IBAction func Preset3ButtonPressed(_ sender: AnyObject) {
+    NotificationCenter.default.post(name: Notification.Name(rawValue: Preset3ButtonKey), object: nil)
     Overdrivelevel = ViewControllerFactory3.sharedFactory3.effect1ViewController.overdrivelevel
     OverdriveIsOn = ViewControllerFactory3.sharedFactory3.effect1ViewController.isON
     isByPass1 = !OverdriveIsOn
@@ -222,12 +222,12 @@ class PresetViewContoller: UIViewController {
         Preset3.alpha = 0.2
         }
         
-        NSNotificationCenter.defaultCenter().postNotificationName("selectorUpdate", object: nil)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "selectorUpdate"), object: nil)
     }
     
     
     func changeProgress () {
-    var value = progressBuffer.maxElement()!
+    var value = progressBuffer.max()!
     self.progressIn.setProgress(Float(value), animated: true)
     self.progressOut.setProgress(Float(value), animated: true)
     }

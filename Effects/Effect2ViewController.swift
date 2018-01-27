@@ -32,18 +32,18 @@ class Effect2ViewController: UIViewController {
         redLed.image = UIImage(named: "lightOff.png")
         
         let rotationGestrure1 = UIRotationGestureRecognizer()
-        rotationGestrure1.addTarget(self, action: "handleDelayRotation:")
+        rotationGestrure1.addTarget(self, action: #selector(Effect2ViewController.handleDelayRotation(_:)))
         self.delayRotateView.addGestureRecognizer(rotationGestrure1)
         let rotationGestrure2 = UIRotationGestureRecognizer()
-        rotationGestrure2.addTarget(self, action: "handleFeedbackRotation:")
+        rotationGestrure2.addTarget(self, action: #selector(Effect2ViewController.handleFeedbackRotation(_:)))
         self.feedbackRotateView.addGestureRecognizer(rotationGestrure2)
 
         
         let tapGestrure = UITapGestureRecognizer()
-        tapGestrure.addTarget(self, action: "handleTap")
+        tapGestrure.addTarget(self, action: #selector(Effect2ViewController.handleTap))
         self.tapView.addGestureRecognizer(tapGestrure)
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "switchEffect", name: "ByPass2ButtonPressed", object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(Effect2ViewController.switchEffect), name: NSNotification.Name(rawValue: "ByPass2ButtonPressed"), object: nil)
         
         
 
@@ -55,22 +55,22 @@ class Effect2ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func handleDelayRotation (rotationGesture : UIRotationGestureRecognizer) {
+    func handleDelayRotation (_ rotationGesture : UIRotationGestureRecognizer) {
         self.delayLevel += Float(rotationGesture.rotation) * 8000
         if self.delayLevel > 45000 {self.delayLevel = 45000}
         else if self.delayLevel < 5000 {self.delayLevel = 5000}
         else {
-        self.delayRotateView.transform = CGAffineTransformRotate(self.delayRotateView.transform, rotationGesture.rotation)
+        self.delayRotateView.transform = self.delayRotateView.transform.rotated(by: rotationGesture.rotation)
         }
         DelayLevel = self.delayLevel
         rotationGesture.rotation = 0.0
     }
 
-    func handleFeedbackRotation (rotationGesture : UIRotationGestureRecognizer) {
+    func handleFeedbackRotation (_ rotationGesture : UIRotationGestureRecognizer) {
         self.feedbackLevel += Float(rotationGesture.rotation) / 6
         if self.feedbackLevel > 0.9 { self.feedbackLevel = 0.9}
         else if self.feedbackLevel < 0.1 {self.feedbackLevel = 0.1}
-        else {self.feedbackRotateView.transform = CGAffineTransformRotate(self.feedbackRotateView.transform, rotationGesture.rotation)
+        else {self.feedbackRotateView.transform = self.feedbackRotateView.transform.rotated(by: rotationGesture.rotation)
         }
         FeedbackLevel = self.feedbackLevel
         rotationGesture.rotation = 0.0
@@ -78,7 +78,7 @@ class Effect2ViewController: UIViewController {
     
     func handleTap() {
         
-        NSNotificationCenter.defaultCenter().postNotificationName("setByPass2", object: nil)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "setByPass2"), object: nil)
         self.isON = !isON
         if(isON){
             self.redLed.image = UIImage(named: "redLightOn.png")

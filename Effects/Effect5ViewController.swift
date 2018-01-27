@@ -28,16 +28,16 @@ class Effect5ViewController: UIViewController {
         redLed.image = UIImage(named: "lightOff.png")
         
         let rotationGestrure = UIRotationGestureRecognizer()
-        rotationGestrure.addTarget(self, action: "handleRotation:")
+        rotationGestrure.addTarget(self, action: #selector(Effect5ViewController.handleRotation(_:)))
         self.rotateView.addGestureRecognizer(rotationGestrure)
         
         let tapGestrure = UITapGestureRecognizer()
-        tapGestrure.addTarget(self, action: "handleTap")
+        tapGestrure.addTarget(self, action: #selector(Effect5ViewController.handleTap))
         self.tapView.addGestureRecognizer(tapGestrure)
         
         
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "switchEffect", name: "ByPass5ButtonPressed", object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(Effect5ViewController.switchEffect), name: NSNotification.Name(rawValue: "ByPass5ButtonPressed"), object: nil)
 
 
         // Do any additional setup after loading the view.
@@ -48,12 +48,12 @@ class Effect5ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func handleRotation (rotationGesture : UIRotationGestureRecognizer) {
+    func handleRotation (_ rotationGesture : UIRotationGestureRecognizer) {
         self.tremolo += Float(rotationGesture.rotation) / 9
         if self.tremolo > 0.59 {self.tremolo = 0.59}
         else if self.tremolo < 0.01 {self.tremolo = 0.01}
         else {
-        self.rotateView.transform = CGAffineTransformRotate(self.rotateView.transform, rotationGesture.rotation)
+        self.rotateView.transform = self.rotateView.transform.rotated(by: rotationGesture.rotation)
         }
         Tremolo = self.tremolo
         rotationGesture.rotation = 0.0
@@ -62,7 +62,7 @@ class Effect5ViewController: UIViewController {
     
     func handleTap() {
         
-        NSNotificationCenter.defaultCenter().postNotificationName("setByPass5", object: nil)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "setByPass5"), object: nil)
         self.isON = !isON
         if(isON){
             self.redLed.image = UIImage(named: "redLightOn.png")
